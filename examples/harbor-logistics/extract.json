@@ -1,0 +1,580 @@
+{
+  "vendor": "Ledgerline, Inc.",
+  "customer": "Harbor Logistics Group, LLC",
+  "effective_date": "2026-11-02",
+  "go_live_date": "2027-01-15",
+  "total_fee": 48000.0,
+  "currency": "USD",
+  "requirements": [
+    {
+      "id": "R01",
+      "category": "project_management",
+      "title": "Named implementation lead and kickoff",
+      "description": "Assign a named implementation lead who runs a kickoff meeting within 10 business days of the SOW effective date.",
+      "acceptance_criteria": [
+        "Named implementation lead assigned",
+        "Kickoff meeting held within 10 business days of November 2, 2026"
+      ],
+      "source": {
+        "section": "2.1",
+        "quote": "Ledgerline will assign a named implementation lead who will run a kickoff meeting within 10 business days of the SOW effective date"
+      }
+    },
+    {
+      "id": "R02",
+      "category": "project_management",
+      "title": "Weekly status meetings",
+      "description": "Hold weekly status meetings with the Customer throughout the project.",
+      "acceptance_criteria": [
+        "Status meeting held every week"
+      ],
+      "source": {
+        "section": "2.1",
+        "quote": "hold weekly status meetings"
+      }
+    },
+    {
+      "id": "R03",
+      "category": "project_management",
+      "title": "Shared project plan",
+      "description": "Maintain a project plan shared with the Customer.",
+      "acceptance_criteria": [],
+      "source": {
+        "section": "2.1",
+        "quote": "maintain a shared project plan"
+      }
+    },
+    {
+      "id": "R04",
+      "category": "discovery",
+      "title": "Discovery workshops",
+      "description": "Run discovery workshops to document current invoice intake, approval rules and payment processes.",
+      "acceptance_criteria": [
+        "Up to 4 workshops",
+        "Each workshop up to 2 hours",
+        "Current invoice intake, approval rules and payment processes documented"
+      ],
+      "source": {
+        "section": "2.2",
+        "quote": "Ledgerline will run up to four (4) discovery workshops of up to two hours each to document the Customer's current invoice intake, approval rules and payment processes."
+      }
+    },
+    {
+      "id": "R05",
+      "category": "configuration",
+      "title": "Configure three operating entities",
+      "description": "Configure the Platform for Harbor Logistics Group (US), Harbor Freight Canada Ltd. and Harbor Warehousing LLC.",
+      "acceptance_criteria": [
+        "3 entities configured: Harbor Logistics Group (US), Harbor Freight Canada Ltd., Harbor Warehousing LLC"
+      ],
+      "source": {
+        "section": "2.3",
+        "quote": "Ledgerline will configure the Platform for the three operating entities listed in Section 1"
+      }
+    },
+    {
+      "id": "R06",
+      "category": "configuration",
+      "title": "Configure approval workflows",
+      "description": "Configure approval workflows supporting multi-level approval by invoice amount, department and entity.",
+      "acceptance_criteria": [
+        "Up to 15 approval workflows in total across all entities",
+        "Multi-level approval based on invoice amount, department and entity"
+      ],
+      "source": {
+        "section": "2.3",
+        "quote": "including up to fifteen (15) approval workflows in total. Approval workflows will support multi-level approval based on invoice amount, department and entity."
+      }
+    },
+    {
+      "id": "R07",
+      "category": "integration",
+      "title": "NetSuite ERP integration",
+      "description": "Integrate the Platform with Oracle NetSuite, syncing vendors, purchase orders, GL accounts and approved bills, and posting payment status back to NetSuite.",
+      "acceptance_criteria": [
+        "Vendors sync",
+        "Purchase orders sync",
+        "GL accounts sync",
+        "Approved bills sync",
+        "Payment status posts back to NetSuite"
+      ],
+      "source": {
+        "section": "2.4",
+        "quote": "The NetSuite integration will sync vendors, purchase orders, GL accounts and approved bills, and will post payment status back to NetSuite."
+      }
+    },
+    {
+      "id": "R08",
+      "category": "integration",
+      "title": "Other integrations as reasonably required",
+      "description": "Integrate the Platform with any other systems reasonably required by the Customer (unbounded; conflicts with Section 6).",
+      "acceptance_criteria": [],
+      "source": {
+        "section": "2.4",
+        "quote": "and any other systems as reasonably required by the Customer"
+      }
+    },
+    {
+      "id": "R09",
+      "category": "configuration",
+      "title": "Two-way and three-way PO matching",
+      "description": "Configure two-way and three-way matching of invoices to purchase orders and receipts, with tolerance thresholds agreed during discovery.",
+      "acceptance_criteria": [
+        "Two-way matching configured",
+        "Three-way matching configured",
+        "Tolerance thresholds as agreed during discovery"
+      ],
+      "source": {
+        "section": "2.5",
+        "quote": "Ledgerline will configure two-way and three-way matching of invoices to purchase orders and receipts, with tolerance thresholds agreed during discovery."
+      }
+    },
+    {
+      "id": "R10",
+      "category": "data_migration",
+      "title": "Migrate historical vendor data",
+      "description": "Migrate the Customer's historical vendor data into the Platform.",
+      "acceptance_criteria": [],
+      "source": {
+        "section": "2.6",
+        "quote": "Ledgerline will migrate the Customer's historical vendor data into the Platform."
+      }
+    },
+    {
+      "id": "R11",
+      "category": "configuration",
+      "title": "ACH and virtual card payments (US)",
+      "description": "Enable ACH and virtual card payments for US entities.",
+      "acceptance_criteria": [
+        "ACH payments enabled for US entities",
+        "Virtual card payments enabled for US entities"
+      ],
+      "source": {
+        "section": "2.7",
+        "quote": "Ledgerline will enable ACH and virtual card payments for US entities."
+      }
+    },
+    {
+      "id": "R12",
+      "category": "configuration",
+      "title": "CAD EFT payments for Canada",
+      "description": "Support payments in CAD via EFT for Harbor Freight Canada Ltd.",
+      "acceptance_criteria": [
+        "CAD payments via EFT supported for Harbor Freight Canada Ltd."
+      ],
+      "source": {
+        "section": "2.7",
+        "quote": "Payments for Harbor Freight Canada Ltd. will be supported in CAD via EFT."
+      }
+    },
+    {
+      "id": "R13",
+      "category": "security",
+      "title": "SAML SSO with Okta",
+      "description": "Configure SAML single sign-on with the Customer's Okta identity provider.",
+      "acceptance_criteria": [
+        "SAML SSO via Okta working"
+      ],
+      "source": {
+        "section": "2.8",
+        "quote": "Ledgerline will configure SAML single sign-on with the Customer's identity provider (Okta)."
+      }
+    },
+    {
+      "id": "R14",
+      "category": "reporting",
+      "title": "Standard AP reports",
+      "description": "Deliver standard AP aging and approval cycle-time reports.",
+      "acceptance_criteria": [
+        "AP aging report delivered",
+        "Approval cycle-time report delivered"
+      ],
+      "source": {
+        "section": "2.9",
+        "quote": "Ledgerline will deliver standard AP aging and approval cycle-time reports"
+      }
+    },
+    {
+      "id": "R15",
+      "category": "reporting",
+      "title": "Custom reports",
+      "description": "Deliver custom reports specified by the Customer.",
+      "acceptance_criteria": [
+        "Up to 3 custom reports"
+      ],
+      "source": {
+        "section": "2.9",
+        "quote": "up to three (3) custom reports specified by the Customer"
+      }
+    },
+    {
+      "id": "R16",
+      "category": "training",
+      "title": "Train-the-trainer sessions",
+      "description": "Deliver train-the-trainer sessions for Customer administrators.",
+      "acceptance_criteria": [
+        "2 sessions",
+        "Up to 10 Customer administrators"
+      ],
+      "source": {
+        "section": "2.10",
+        "quote": "Ledgerline will deliver two (2) train-the-trainer sessions for up to ten (10) Customer administrators"
+      }
+    },
+    {
+      "id": "R17",
+      "category": "training",
+      "title": "Recorded end-user training videos",
+      "description": "Provide recorded end-user training videos.",
+      "acceptance_criteria": [],
+      "source": {
+        "section": "2.10",
+        "quote": "provide recorded end-user training videos"
+      }
+    },
+    {
+      "id": "R18",
+      "category": "support",
+      "title": "30-day hypercare",
+      "description": "Provide hypercare support after go-live with defined priority-1 response time.",
+      "acceptance_criteria": [
+        "30 days of hypercare after go-live",
+        "Priority-1 response within 4 business hours"
+      ],
+      "source": {
+        "section": "2.11",
+        "quote": "Ledgerline will provide thirty (30) days of hypercare support after go-live, with a response time of four (4) business hours for priority-1 issues."
+      }
+    }
+  ],
+  "customer_dependencies": [
+    {
+      "id": "C01",
+      "description": "Provide a project sponsor with decision-making authority and a day-to-day project manager.",
+      "due": "Not stated",
+      "blocks": [
+        "R01",
+        "R04",
+        "R06",
+        "R09"
+      ],
+      "source": {
+        "section": "4.1",
+        "quote": "The Customer will provide a project sponsor with decision-making authority and a day-to-day project manager."
+      }
+    },
+    {
+      "id": "C02",
+      "description": "Provide NetSuite sandbox access and an administrator with integration permissions.",
+      "due": "within five (5) business days of kickoff",
+      "blocks": [
+        "R07",
+        "R09",
+        "R11",
+        "R12"
+      ],
+      "source": {
+        "section": "4.2",
+        "quote": "The Customer will provide NetSuite sandbox access and an administrator with integration permissions within five (5) business days of kickoff."
+      }
+    },
+    {
+      "id": "C03",
+      "description": "Deliver vendor master data, open purchase orders and approval matrices in Ledgerline's templates.",
+      "due": "within ten (10) business days of the final discovery workshop",
+      "blocks": [
+        "R06",
+        "R09",
+        "R10"
+      ],
+      "source": {
+        "section": "4.3",
+        "quote": "The Customer will deliver vendor master data, open purchase orders and approval matrices in Ledgerline's templates within ten (10) business days of the final discovery workshop."
+      }
+    },
+    {
+      "id": "C04",
+      "description": "Complete user acceptance testing of the configured Platform.",
+      "due": "within ten (10) business days of Ledgerline making the configured Platform available for testing",
+      "blocks": [
+        "R05",
+        "R06",
+        "R07",
+        "R09",
+        "R10",
+        "R11",
+        "R12",
+        "R13",
+        "R14",
+        "R15"
+      ],
+      "source": {
+        "section": "4.4",
+        "quote": "The Customer will complete user acceptance testing (UAT) within ten (10) business days of Ledgerline making the configured Platform available for testing."
+      }
+    },
+    {
+      "id": "C05",
+      "description": "Obtain the Customer's bank approval to enable virtual card and ACH payments.",
+      "due": "Not stated",
+      "blocks": [
+        "R11"
+      ],
+      "source": {
+        "section": "4.5",
+        "quote": "The Customer is responsible for obtaining its bank's approval to enable virtual card and ACH payments."
+      }
+    },
+    {
+      "id": "C06",
+      "description": "Specify the custom reports to be built.",
+      "due": "Not stated",
+      "blocks": [
+        "R15"
+      ],
+      "source": {
+        "section": "2.9",
+        "quote": "custom reports specified by the Customer"
+      }
+    },
+    {
+      "id": "C07",
+      "description": "Agree PO matching tolerance thresholds with Ledgerline.",
+      "due": "during discovery",
+      "blocks": [
+        "R09"
+      ],
+      "source": {
+        "section": "2.5",
+        "quote": "tolerance thresholds agreed during discovery"
+      }
+    }
+  ],
+  "milestones": [
+    {
+      "name": "SOW effective date",
+      "date": "2026-11-02",
+      "source": {
+        "section": "",
+        "quote": "SOW effective date:** November 2, 2026"
+      }
+    },
+    {
+      "name": "Kickoff meeting (within 10 business days of SOW effective date)",
+      "date": "",
+      "source": {
+        "section": "2.1",
+        "quote": "run a kickoff meeting within 10 business days of the SOW effective date"
+      }
+    },
+    {
+      "name": "UAT completion (within 10 business days of Platform available for testing)",
+      "date": "",
+      "source": {
+        "section": "4.4",
+        "quote": "complete user acceptance testing (UAT) within ten (10) business days"
+      }
+    },
+    {
+      "name": "Go-live for all three entities (target)",
+      "date": "2027-01-15",
+      "source": {
+        "section": "3.1",
+        "quote": "go-live for all three entities on January 15, 2027"
+      }
+    },
+    {
+      "name": "End of hypercare (30 days after go-live)",
+      "date": "",
+      "source": {
+        "section": "2.11",
+        "quote": "thirty (30) days of hypercare support after go-live"
+      }
+    }
+  ],
+  "out_of_scope": [
+    {
+      "section": "6",
+      "quote": "integrations with systems other than NetSuite and Okta"
+    },
+    {
+      "section": "6",
+      "quote": "migration of historical invoices or payment history"
+    },
+    {
+      "section": "6",
+      "quote": "custom development of Platform features"
+    },
+    {
+      "section": "6",
+      "quote": "on-site services"
+    },
+    {
+      "section": "6",
+      "quote": "support for entities other than those named in Section 1"
+    }
+  ],
+  "payment_terms": [
+    {
+      "trigger": "SOW signature",
+      "percent": 30.0,
+      "amount": 14400.0,
+      "source": {
+        "section": "8.1",
+        "quote": "30% on SOW signature"
+      }
+    },
+    {
+      "trigger": "Completion of UAT",
+      "percent": 40.0,
+      "amount": 19200.0,
+      "source": {
+        "section": "8.1",
+        "quote": "40% on completion of UAT"
+      }
+    },
+    {
+      "trigger": "Go-live",
+      "percent": 30.0,
+      "amount": 14400.0,
+      "source": {
+        "section": "8.1",
+        "quote": "30% on go-live"
+      }
+    }
+  ],
+  "risks": [
+    {
+      "id": "K01",
+      "type": "contradiction",
+      "severity": "high",
+      "description": "Section 2.4 commits Ledgerline to integrate 'any other systems as reasonably required by the Customer', while Section 6 excludes integrations other than NetSuite and Okta. This open-ended clause on a $48,000 fixed fee invites scope disputes and margin erosion.",
+      "recommendation": "Confirm in writing at kickoff that integrations are limited to NetSuite and Okta per Section 6, and route any other system requests through the Section 7 change order process.",
+      "source": {
+        "section": "2.4",
+        "quote": "and any other systems as reasonably required by the Customer"
+      }
+    },
+    {
+      "id": "K02",
+      "type": "timeline",
+      "severity": "high",
+      "description": "Go-live for three entities across two countries, with integration, PO matching and three payment rails, is targeted about 10 weeks after the effective date. The window includes US Thanksgiving and the Christmas/New Year holidays, and kickoff can slip to mid-November. Sequential dependencies (discovery, then 10 business days for data, then build, then 10 business days of UAT) leave almost no buffer.",
+      "recommendation": "Build a backward-scheduled plan at kickoff with holiday blackout dates, show the Customer the critical path, and agree a fallback such as phased go-live by entity if any dependency slips.",
+      "source": {
+        "section": "3.1",
+        "quote": "go-live for all three entities on January 15, 2027"
+      }
+    },
+    {
+      "id": "K03",
+      "type": "customer_dependency",
+      "severity": "high",
+      "description": "Bank approval for ACH and virtual card has no due date, and bank onboarding often takes weeks. The Customer's bank setup for CAD EFT is not assigned to anyone. Either can block payments at go-live.",
+      "recommendation": "Ask the Customer at kickoff to start bank approvals immediately for ACH, virtual card and CAD EFT, set a due date in the project plan, and log a change order or phased payments go-live if approval is late.",
+      "source": {
+        "section": "4.5",
+        "quote": "The Customer is responsible for obtaining its bank's approval to enable virtual card and ACH payments."
+      }
+    },
+    {
+      "id": "K04",
+      "type": "commercial",
+      "severity": "high",
+      "description": "40% ($19,200) is payable on 'completion of UAT' and 30% ($14,400) on go-live, both controlled by the Customer. Section 3.2 says delays depend on the Customer but gives no remedy, timeline relief or fee for Customer-caused delay.",
+      "recommendation": "Agree at kickoff that UAT is complete when the 10-business-day UAT window closes or deemed acceptance applies, and that Customer-caused delays trigger a change order under Section 7. Document every late dependency in status reports.",
+      "source": {
+        "section": "8.1",
+        "quote": "40% on completion of UAT, 30% on go-live"
+      }
+    },
+    {
+      "id": "K05",
+      "type": "contradiction",
+      "severity": "medium",
+      "description": "Deemed acceptance applies 5 business days after delivery, but the Customer has 10 business days to complete UAT. 'Material defect' is not defined. The mismatch will cause disputes over when deliverables, and the UAT payment, are accepted.",
+      "recommendation": "Agree at kickoff which period governs the configured Platform (10-day UAT vs 5-day deemed acceptance), define 'material defect' and severity levels, and issue written delivery notices to start the clock.",
+      "source": {
+        "section": "5.1",
+        "quote": "Each deliverable will be deemed accepted if the Customer does not report a material defect in writing within five (5) business days of delivery."
+      }
+    },
+    {
+      "id": "K06",
+      "type": "ambiguous_scope",
+      "severity": "medium",
+      "description": "Three-way matching needs receipts, but the NetSuite integration scope lists only vendors, purchase orders, GL accounts and approved bills. Tolerance thresholds are not yet defined.",
+      "recommendation": "Confirm during discovery that item receipts will be synced from NetSuite and record that in the scope baseline. Capture tolerance thresholds in a signed discovery document.",
+      "source": {
+        "section": "2.5",
+        "quote": "two-way and three-way matching of invoices to purchase orders and receipts"
+      }
+    },
+    {
+      "id": "K07",
+      "type": "unquantified",
+      "severity": "medium",
+      "description": "Data migration of 'historical vendor data' has no record volume, no defined fields, no number of loads and no acceptance criteria. 'Historical' could be read to include inactive vendors or bank details. The boundary with excluded historical invoices may blur.",
+      "recommendation": "Agree at kickoff a record count limit, field list, number of migration loads and a reconciliation-based acceptance test, and confirm vendor bank details handling.",
+      "source": {
+        "section": "2.6",
+        "quote": "Ledgerline will migrate the Customer's historical vendor data into the Platform."
+      }
+    },
+    {
+      "id": "K08",
+      "type": "missing_acceptance_criteria",
+      "severity": "medium",
+      "description": "The three custom reports are 'specified by the Customer' with no due date for specifications and no complexity limit. Late or complex specs could push work past go-live.",
+      "recommendation": "Set a deadline for custom report specifications (e.g. end of discovery) and agree a complexity boundary using Platform reporting tools only, consistent with the custom development exclusion.",
+      "source": {
+        "section": "2.9",
+        "quote": "up to three (3) custom reports specified by the Customer"
+      }
+    },
+    {
+      "id": "K09",
+      "type": "ambiguous_scope",
+      "severity": "low",
+      "description": "ACH and virtual card are enabled for 'US entities', but the contract does not say whether Harbor Warehousing LLC is a US entity. Payment rails per entity could be disputed.",
+      "recommendation": "Confirm the country and payment methods for each of the three entities at kickoff and record them in the project plan.",
+      "source": {
+        "section": "2.7",
+        "quote": "Ledgerline will enable ACH and virtual card payments for US entities."
+      }
+    },
+    {
+      "id": "K10",
+      "type": "customer_dependency",
+      "severity": "medium",
+      "description": "SSO configuration requires Okta admin access, but no Customer obligation or date is listed. Section 4.1 sponsor and PM have no due date. Discovery and decisions may stall without them.",
+      "recommendation": "Request at kickoff a named Okta administrator with a date for access, and confirm the sponsor and PM by name before the first discovery workshop.",
+      "source": {
+        "section": "4.1",
+        "quote": "The Customer will provide a project sponsor with decision-making authority and a day-to-day project manager."
+      }
+    },
+    {
+      "id": "K11",
+      "type": "timeline",
+      "severity": "low",
+      "description": "Only four 2-hour discovery workshops must cover intake, approval rules, matching tolerances and payments for three entities in two countries. That may be too little to finalize 15 workflows and thresholds.",
+      "recommendation": "Publish a workshop agenda at kickoff that allocates topics across the four sessions, and require pre-work from the Customer (current approval matrices, payment processes).",
+      "source": {
+        "section": "2.2",
+        "quote": "up to four (4) discovery workshops of up to two hours each"
+      }
+    },
+    {
+      "id": "K12",
+      "type": "unquantified",
+      "severity": "low",
+      "description": "End-user training videos have no number, length or topic list. Hypercare does not define priority-1, whether 30 days are calendar or business days, or which time zone sets business hours.",
+      "recommendation": "Agree at kickoff a video list with topics and length, a priority definition matrix, and the hypercare calendar and time zone.",
+      "source": {
+        "section": "2.10",
+        "quote": "provide recorded end-user training videos"
+      }
+    }
+  ]
+}

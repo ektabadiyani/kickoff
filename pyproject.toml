@@ -1,0 +1,26 @@
+[project]
+name = "kickoff"
+version = "0.1.0"
+description = "Turn a signed contract into a kickoff brief, a traceable project plan and Jira tickets."
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "anthropic>=2.2.0",
+    "pypdf>=6.21.2",
+]
+
+[project.scripts]
+kickoff = "kickoff.cli:main"
+
+[build-system]
+requires = ["uv_build>=0.13.1,<0.14.0"]
+build-backend = "uv_build"
+
+[dependency-groups]
+dev = [
+    "pytest>=9.1.1",
+]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]

@@ -1,0 +1,402 @@
+[
+  {
+    "item_id": "R01",
+    "kind": "requirement",
+    "section": "2.1",
+    "quote": "Ledgerline will assign a named implementation lead who will run a kickoff meeting within 10 business days of the SOW effective date",
+    "match": "verified",
+    "similarity": 1.0
+  },
+  {
+    "item_id": "R02",
+    "kind": "requirement",
+    "section": "2.1",
+    "quote": "hold weekly status meetings",
+    "match": "verified",
+    "similarity": 1.0
+  },
+  {
+    "item_id": "R03",
+    "kind": "requirement",
+    "section": "2.1",
+    "quote": "maintain a shared project plan",
+    "match": "verified",
+    "similarity": 1.0
+  },
+  {
+    "item_id": "R04",
+    "kind": "requirement",
+    "section": "2.2",
+    "quote": "Ledgerline will run up to four (4) discovery workshops of up to two hours each to document the Customer's current invoice intake, approval rules and payment processes.",
+    "match": "verified",
+    "similarity": 1.0
+  },
+  {
+    "item_id": "R05",
+    "kind": "requirement",
+    "section": "2.3",
+    "quote": "Ledgerline will configure the Platform for the three operating entities listed in Section 1",
+    "match": "verified",
+    "similarity": 1.0
+  },
+  {
+    "item_id": "R06",
+    "kind": "requirement",
+    "section": "2.3",
+    "quote": "including up to fifteen (15) approval workflows in total. Approval workflows will support multi-level approval based on invoice amount, department and entity.",
+    "match": "verified",
+    "similarity": 1.0
+  },
+  {
+    "item_id": "R07",
+    "kind": "requirement",
+    "section": "2.4",
+    "quote": "The NetSuite integration will sync vendors, purchase orders, GL accounts and approved bills, and will post payment status back to NetSuite.",
+    "match": "verified",
+    "similarity": 1.0
+  },
+  {
+    "item_id": "R08",
+    "kind": "requirement",
+    "section": "2.4",
+    "quote": "and any other systems as reasonably required by the Customer",
+    "match": "verified",
+    "similarity": 1.0
+  },
+  {
+    "item_id": "R09",
+    "kind": "requirement",
+    "section": "2.5",
+    "quote": "Ledgerline will configure two-way and three-way matching of invoices to purchase orders and receipts, with tolerance thresholds agreed during discovery.",
+    "match": "verified",
+    "similarity": 1.0
+  },
+  {
+    "item_id": "R10",
+    "kind": "requirement",
+    "section": "2.6",
+    "quote": "Ledgerline will migrate the Customer's historical vendor data into the Platform.",
+    "match": "verified",
+    "similarity": 1.0
+  },
+  {
+    "item_id": "R11",
+    "kind": "requirement",
+    "section": "2.7",
+    "quote": "Ledgerline will enable ACH and virtual card payments for US entities.",
+    "match": "verified",
+    "similarity": 1.0
+  },
+  {
+    "item_id": "R12",
+    "kind": "requirement",
+    "section": "2.7",
+    "quote": "Payments for Harbor Freight Canada Ltd. will be supported in CAD via EFT.",
+    "match": "verified",
+    "similarity": 1.0
+  },
+  {
+    "item_id": "R13",
+    "kind": "requirement",
+    "section": "2.8",
+    "quote": "Ledgerline will configure SAML single sign-on with the Customer's identity provider (Okta).",
+    "match": "verified",
+    "similarity": 1.0
+  },
+  {
+    "item_id": "R14",
+    "kind": "requirement",
+    "section": "2.9",
+    "quote": "Ledgerline will deliver standard AP aging and approval cycle-time reports",
+    "match": "verified",
+    "similarity": 1.0
+  },
+  {
+    "item_id": "R15",
+    "kind": "requirement",
+    "section": "2.9",
+    "quote": "up to three (3) custom reports specified by the Customer",
+    "match": "verified",
+    "similarity": 1.0
+  },
+  {
+    "item_id": "R16",
+    "kind": "requirement",
+    "section": "2.10",
+    "quote": "Ledgerline will deliver two (2) train-the-trainer sessions for up to ten (10) Customer administrators",
+    "match": "verified",
+    "similarity": 1.0
+  },
+  {
+    "item_id": "R17",
+    "kind": "requirement",
+    "section": "2.10",
+    "quote": "provide recorded end-user training videos",
+    "match": "verified",
+    "similarity": 1.0
+  },
+  {
+    "item_id": "R18",
+    "kind": "requirement",
+    "section": "2.11",
+    "quote": "Ledgerline will provide thirty (30) days of hypercare support after go-live, with a response time of four (4) business hours for priority-1 issues.",
+    "match": "verified",
+    "similarity": 1.0
+  },
+  {
+    "item_id": "C01",
+    "kind": "customer dependency",
+    "section": "4.1",
+    "quote": "The Customer will provide a project sponsor with decision-making authority and a day-to-day project manager.",
+    "match": "verified",
+    "similarity": 1.0
+  },
+  {
+    "item_id": "C02",
+    "kind": "customer dependency",
+    "section": "4.2",
+    "quote": "The Customer will provide NetSuite sandbox access and an administrator with integration permissions within five (5) business days of kickoff.",
+    "match": "verified",
+    "similarity": 1.0
+  },
+  {
+    "item_id": "C03",
+    "kind": "customer dependency",
+    "section": "4.3",
+    "quote": "The Customer will deliver vendor master data, open purchase orders and approval matrices in Ledgerline's templates within ten (10) business days of the final discovery workshop.",
+    "match": "verified",
+    "similarity": 1.0
+  },
+  {
+    "item_id": "C04",
+    "kind": "customer dependency",
+    "section": "4.4",
+    "quote": "The Customer will complete user acceptance testing (UAT) within ten (10) business days of Ledgerline making the configured Platform available for testing.",
+    "match": "verified",
+    "similarity": 1.0
+  },
+  {
+    "item_id": "C05",
+    "kind": "customer dependency",
+    "section": "4.5",
+    "quote": "The Customer is responsible for obtaining its bank's approval to enable virtual card and ACH payments.",
+    "match": "verified",
+    "similarity": 1.0
+  },
+  {
+    "item_id": "C06",
+    "kind": "customer dependency",
+    "section": "2.9",
+    "quote": "custom reports specified by the Customer",
+    "match": "verified",
+    "similarity": 1.0
+  },
+  {
+    "item_id": "C07",
+    "kind": "customer dependency",
+    "section": "2.5",
+    "quote": "tolerance thresholds agreed during discovery",
+    "match": "verified",
+    "similarity": 1.0
+  },
+  {
+    "item_id": "K01",
+    "kind": "risk",
+    "section": "2.4",
+    "quote": "and any other systems as reasonably required by the Customer",
+    "match": "verified",
+    "similarity": 1.0
+  },
+  {
+    "item_id": "K02",
+    "kind": "risk",
+    "section": "3.1",
+    "quote": "go-live for all three entities on January 15, 2027",
+    "match": "verified",
+    "similarity": 1.0
+  },
+  {
+    "item_id": "K03",
+    "kind": "risk",
+    "section": "4.5",
+    "quote": "The Customer is responsible for obtaining its bank's approval to enable virtual card and ACH payments.",
+    "match": "verified",
+    "similarity": 1.0
+  },
+  {
+    "item_id": "K04",
+    "kind": "risk",
+    "section": "8.1",
+    "quote": "40% on completion of UAT, 30% on go-live",
+    "match": "verified",
+    "similarity": 1.0
+  },
+  {
+    "item_id": "K05",
+    "kind": "risk",
+    "section": "5.1",
+    "quote": "Each deliverable will be deemed accepted if the Customer does not report a material defect in writing within five (5) business days of delivery.",
+    "match": "verified",
+    "similarity": 1.0
+  },
+  {
+    "item_id": "K06",
+    "kind": "risk",
+    "section": "2.5",
+    "quote": "two-way and three-way matching of invoices to purchase orders and receipts",
+    "match": "verified",
+    "similarity": 1.0
+  },
+  {
+    "item_id": "K07",
+    "kind": "risk",
+    "section": "2.6",
+    "quote": "Ledgerline will migrate the Customer's historical vendor data into the Platform.",
+    "match": "verified",
+    "similarity": 1.0
+  },
+  {
+    "item_id": "K08",
+    "kind": "risk",
+    "section": "2.9",
+    "quote": "up to three (3) custom reports specified by the Customer",
+    "match": "verified",
+    "similarity": 1.0
+  },
+  {
+    "item_id": "K09",
+    "kind": "risk",
+    "section": "2.7",
+    "quote": "Ledgerline will enable ACH and virtual card payments for US entities.",
+    "match": "verified",
+    "similarity": 1.0
+  },
+  {
+    "item_id": "K10",
+    "kind": "risk",
+    "section": "4.1",
+    "quote": "The Customer will provide a project sponsor with decision-making authority and a day-to-day project manager.",
+    "match": "verified",
+    "similarity": 1.0
+  },
+  {
+    "item_id": "K11",
+    "kind": "risk",
+    "section": "2.2",
+    "quote": "up to four (4) discovery workshops of up to two hours each",
+    "match": "verified",
+    "similarity": 1.0
+  },
+  {
+    "item_id": "K12",
+    "kind": "risk",
+    "section": "2.10",
+    "quote": "provide recorded end-user training videos",
+    "match": "verified",
+    "similarity": 1.0
+  },
+  {
+    "item_id": "M1",
+    "kind": "milestone",
+    "section": "",
+    "quote": "SOW effective date:** November 2, 2026",
+    "match": "verified",
+    "similarity": 1.0
+  },
+  {
+    "item_id": "M2",
+    "kind": "milestone",
+    "section": "2.1",
+    "quote": "run a kickoff meeting within 10 business days of the SOW effective date",
+    "match": "verified",
+    "similarity": 1.0
+  },
+  {
+    "item_id": "M3",
+    "kind": "milestone",
+    "section": "4.4",
+    "quote": "complete user acceptance testing (UAT) within ten (10) business days",
+    "match": "verified",
+    "similarity": 1.0
+  },
+  {
+    "item_id": "M4",
+    "kind": "milestone",
+    "section": "3.1",
+    "quote": "go-live for all three entities on January 15, 2027",
+    "match": "verified",
+    "similarity": 1.0
+  },
+  {
+    "item_id": "M5",
+    "kind": "milestone",
+    "section": "2.11",
+    "quote": "thirty (30) days of hypercare support after go-live",
+    "match": "verified",
+    "similarity": 1.0
+  },
+  {
+    "item_id": "X1",
+    "kind": "exclusion",
+    "section": "6",
+    "quote": "integrations with systems other than NetSuite and Okta",
+    "match": "verified",
+    "similarity": 1.0
+  },
+  {
+    "item_id": "X2",
+    "kind": "exclusion",
+    "section": "6",
+    "quote": "migration of historical invoices or payment history",
+    "match": "verified",
+    "similarity": 1.0
+  },
+  {
+    "item_id": "X3",
+    "kind": "exclusion",
+    "section": "6",
+    "quote": "custom development of Platform features",
+    "match": "verified",
+    "similarity": 1.0
+  },
+  {
+    "item_id": "X4",
+    "kind": "exclusion",
+    "section": "6",
+    "quote": "on-site services",
+    "match": "verified",
+    "similarity": 1.0
+  },
+  {
+    "item_id": "X5",
+    "kind": "exclusion",
+    "section": "6",
+    "quote": "support for entities other than those named in Section 1",
+    "match": "verified",
+    "similarity": 1.0
+  },
+  {
+    "item_id": "P1",
+    "kind": "payment term",
+    "section": "8.1",
+    "quote": "30% on SOW signature",
+    "match": "verified",
+    "similarity": 1.0
+  },
+  {
+    "item_id": "P2",
+    "kind": "payment term",
+    "section": "8.1",
+    "quote": "40% on completion of UAT",
+    "match": "verified",
+    "similarity": 1.0
+  },
+  {
+    "item_id": "P3",
+    "kind": "payment term",
+    "section": "8.1",
+    "quote": "30% on go-live",
+    "match": "verified",
+    "similarity": 1.0
+  }
+]

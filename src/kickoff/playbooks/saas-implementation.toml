@@ -1,0 +1,67 @@
+# Standard delivery playbook for a B2B SaaS implementation.
+# Copy and edit this file to match your own methodology, then pass it with --playbook.
+
+name = "SaaS implementation"
+hours_per_day = 6   # productive project hours per person per business day
+
+# Non-working days skipped by the scheduler (US federal holidays plus the Friday after Thanksgiving).
+holidays = [
+  "2026-11-26", "2026-11-27", "2026-12-25", "2027-01-01", "2027-01-18",
+  "2027-02-15", "2027-05-31", "2027-06-18", "2027-07-05", "2027-09-06",
+  "2027-11-25", "2027-11-26", "2027-12-24", "2027-12-31",
+]
+
+# Loaded cost per hour by role, used to estimate delivery cost and margin.
+[roles]
+implementation_lead = 95
+solutions_consultant = 85
+integration_engineer = 100
+data_specialist = 75
+trainer = 70
+support_engineer = 65
+customer = 0
+
+[[phases]]
+name = "Initiate"
+purpose = "Mobilise the project and set up governance."
+standard_tasks = ["Internal handoff from sales", "Kickoff meeting", "Project charter, RACI and status cadence"]
+
+[[phases]]
+name = "Discover"
+purpose = "Understand current processes and agree the target design."
+standard_tasks = ["Discovery workshops", "Solution design document", "Customer sign-off on design"]
+
+[[phases]]
+name = "Configure"
+purpose = "Set up the platform to the agreed design."
+standard_tasks = ["Environment and tenant setup", "Core configuration", "Internal configuration review"]
+
+[[phases]]
+name = "Integrate"
+purpose = "Connect the platform to the customer's other systems."
+standard_tasks = ["Integration design and field mapping", "Build and configure integrations", "Integration testing"]
+
+[[phases]]
+name = "Migrate"
+purpose = "Load the customer's existing data."
+standard_tasks = ["Data templates issued", "Data cleansing and validation", "Data load and reconciliation"]
+
+[[phases]]
+name = "Test"
+purpose = "Prove the solution works before customers rely on it."
+standard_tasks = ["Internal QA", "UAT scripts and environment", "UAT support and defect fixes", "UAT sign-off"]
+
+[[phases]]
+name = "Train"
+purpose = "Make the customer self-sufficient."
+standard_tasks = ["Training materials", "Admin training sessions", "End-user training content"]
+
+[[phases]]
+name = "Launch"
+purpose = "Move to production safely."
+standard_tasks = ["Cutover plan and go/no-go", "Production cutover", "Go-live"]
+
+[[phases]]
+name = "Hypercare"
+purpose = "Stabilise after go-live and hand over to support."
+standard_tasks = ["Hypercare support", "Handoff to customer support team", "Project closure and lessons learned"]

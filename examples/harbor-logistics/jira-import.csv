@@ -1,0 +1,739 @@
+Issue Id,Parent Id,Issue Type,Summary,Description,Labels,Labels,Original Estimate,Start date,Due date
+1,,Epic,"E01 · Project mobilisation, governance and kickoff scope confirmations","The project is mobilised with a named lead, agreed governance, a shared backward-scheduled plan and written answers to every kickoff-level contract risk.
+
+Phase: Initiate",initiate,,,2026-11-02,2027-02-25
+16,,Epic,E02 · Discovery workshops and solution design,"Current processes are documented and the Customer has signed a solution design covering entities, workflows, matching tolerances, payments, SSO and reports.
+
+Phase: Discover",discover,,,2026-11-09,2026-12-16
+28,,Epic,E03 · Platform configuration for three entities,"The sandbox tenant is configured to the signed design for all three entities, with workflows, matching, payments and reports passing internal review.
+
+Phase: Configure",configure,,,2026-11-09,2026-12-30
+44,,Epic,E04 · Oracle NetSuite integration,"Vendors, POs, receipts, GL accounts and approved bills sync with NetSuite, and payment status posts back, all proven in the NetSuite sandbox.
+
+Phase: Integrate",integrate,,,2026-12-17,2027-01-07
+51,,Epic,E05 · Okta SAML single sign-on,"Harbor users sign in to the Platform through Okta SAML SSO.
+
+Phase: Integrate",integrate,,,2026-11-16,2026-11-19
+54,,Epic,E06 · Historical vendor data migration,"Agreed historical vendor data is cleansed, loaded and reconciled in sandbox. No historical invoices or payment history are migrated.
+
+Phase: Migrate",migrate,,,2026-11-12,2026-12-29
+59,,Epic,E07 · Internal QA and user acceptance testing,"The configured Platform has passed internal QA and Customer UAT under the agreed acceptance rules.
+
+Phase: Test",test,,,2027-01-08,2027-02-01
+65,,Epic,E08 · Administrator and end-user training,"Up to 10 Harbor administrators are trained and recorded end-user videos are available.
+
+Phase: Train",train,,,2026-11-12,2027-01-20
+71,,Epic,E09 · Production cutover and go-live,"All three entities are live in production on or before January 15, 2027.
+
+Phase: Launch",launch,,,2027-01-13,2027-02-09
+80,,Epic,"E10 · Hypercare, support handoff and closure","The solution is stable after 30 days of hypercare, Harbor is handed to standard support, and the project is closed.
+
+Phase: Hypercare",hypercare,,,2027-02-10,2027-03-18
+2,1,Task,T001 · Complete internal handoff from sales,"Review the signed SOW, fixed fee ($48,000), payment milestones and risk register (K01-K12) with the sales owner. Assign the named implementation lead and notify Harbor Logistics Group of the lead's name.
+
+Acceptance criteria:
+- Named implementation lead assigned
+- SOW, exclusions and risks K01-K12 reviewed with sales
+- Customer notified in writing of the named implementation lead
+
+Contract: R01 (§2.1)
+Plan id: T001 · on the critical path",initiate,implementation_lead,14400,2026-11-02,2026-11-02
+3,1,Task,T002 · Customer: Name project sponsor and project manager,"Harbor names a project sponsor with decision-making authority and a day-to-day project manager before kickoff and the first discovery workshop (K10).
+
+Acceptance criteria:
+- Project sponsor with decision-making authority named
+- Day-to-day project manager named
+- Both confirmed in writing before kickoff
+
+Blocked by: T001
+Contract: C01 (§4.1)
+Plan id: T002 · on the critical path",initiate,customer,3600,2026-11-03,2026-11-05
+4,1,Task,T003 · Run project kickoff meeting,"Run a remote kickoff meeting covering scope, exclusions, timeline to the January 15, 2027 go-live, customer dependencies and their due dates, and the risk items that need decisions.
+
+Acceptance criteria:
+- Kickoff meeting held within 10 business days of November 2, 2026 (by November 16, 2026)
+- Customer dependencies C01-C07 and due dates presented
+- Minutes and action list distributed within 1 business day
+
+Blocked by: T001, T002
+Contract: R01 (§2.1)
+Plan id: T003 · on the critical path",initiate,implementation_lead,21600,2026-11-06,2026-11-06
+5,1,Task,"T004 · Publish charter, RACI and backward-scheduled shared plan","Produce the project charter and RACI and set the weekly status cadence. Publish a shared project plan backward-scheduled from January 15, 2027, with Thanksgiving and Christmas/New Year blackout dates and the critical path. Agree in principle a fallback of phased go-live by entity if a dependency slips (K02).
+
+Acceptance criteria:
+- Charter and RACI agreed with the Customer PM
+- Shared project plan published with holiday blackout dates and critical path
+- Weekly status meeting series scheduled
+- Phased go-live fallback documented and acknowledged by sponsor
+
+Blocked by: T003
+Contract: R02 (§2.1), R03 (§2.1)
+Plan id: T004",initiate,implementation_lead,36000,2026-11-09,2026-11-11
+6,1,Task,T005 · Confirm integrations limited to NetSuite and Okta,"Resolve the conflict between Section 2.4 ('any other systems as reasonably required') and Section 6. Get written confirmation from the sponsor that integrations are limited to NetSuite and Okta. Any other system request goes through the Section 7 change order process (K01). No other integration work is planned.
+
+Acceptance criteria:
+- Written sponsor confirmation that integration scope is NetSuite and Okta only
+- Process agreed for routing other system requests to a Section 7 change order
+- Confirmation recorded in the scope baseline
+
+Blocked by: T003
+Contract: R08 (§2.4)
+Plan id: T005",initiate,implementation_lead,7200,2026-11-09,2026-11-11
+7,1,Task,T006 · Agree UAT acceptance rules and delay remedies,"Resolve K04/K05: agree whether the 10-business-day UAT window or the 5-business-day deemed acceptance governs the configured Platform. Define 'material defect' and severity levels, the rule for UAT completion (40% milestone), the written delivery notice process, and agree that Customer-caused delays trigger a Section 7 change order.
+
+Acceptance criteria:
+- Governing acceptance period for the configured Platform agreed in writing
+- Material defect and severity levels defined
+- UAT completion rule agreed (window close or deemed acceptance)
+- Customer-caused delay leads to change order, documented
+- Written delivery notice template agreed
+
+Blocked by: T003
+Contract: C04 (§4.4)
+Plan id: T006",initiate,implementation_lead,10800,2026-11-09,2026-11-13
+8,1,Task,T007 · Agree vendor data migration scope and acceptance test,"Resolve K07: agree record count limit, field list, number of migration loads, a reconciliation-based acceptance test, and handling of vendor bank details. Confirm that historical invoices and payment history are excluded per Section 6.
+
+Acceptance criteria:
+- Vendor record count limit agreed
+- Field list agreed
+- Number of loads agreed (trial and production)
+- Reconciliation-based acceptance test agreed
+- Vendor bank details handling confirmed
+- Exclusion of historical invoices and payment history confirmed
+
+Blocked by: T003
+Contract: R10 (§2.6)
+Plan id: T007",initiate,data_specialist,10800,2026-11-09,2026-11-11
+9,1,Task,T008 · Confirm country and payment rails per entity,"Resolve K09: confirm the country of each of the three entities (including whether Harbor Warehousing LLC is a US entity) and which payment methods each uses. Record the result in the shared plan.
+
+Acceptance criteria:
+- Country confirmed for each of the 3 entities
+- Payment methods (ACH, virtual card, CAD EFT) recorded per entity
+- Result recorded in the shared project plan
+
+Blocked by: T003
+Contract: R11 (§2.7), R12 (§2.7)
+Plan id: T008",initiate,solutions_consultant,7200,2026-11-09,2026-11-11
+10,1,Task,"T009 · Customer: Obtain bank approvals for ACH, card, EFT","Harbor starts bank approvals immediately after kickoff for ACH and virtual card payments for US entities. Harbor also completes banking setup for CAD EFT for Harbor Freight Canada Ltd. (K03). The due date is set in the shared plan. Late approval triggers a change order or phased payments go-live.
+
+Acceptance criteria:
+- Bank approval received for ACH payments for US entities
+- Bank approval received for virtual card payments for US entities
+- CAD EFT banking set up for Harbor Freight Canada Ltd.
+- Approvals delivered by the due date recorded in the project plan
+
+Blocked by: T003
+Contract: C05 (§4.5)
+Plan id: T009",initiate,customer,28800,2026-11-09,2026-12-15
+11,1,Task,T010 · Customer: Provide NetSuite sandbox and integration admin,"Harbor provides NetSuite sandbox access and names an administrator with integration permissions.
+
+Acceptance criteria:
+- NetSuite sandbox access provided within 5 business days of kickoff
+- Administrator with integration permissions named
+- Ledgerline credentials tested successfully
+
+Blocked by: T003
+Contract: C02 (§4.2)
+Plan id: T010",initiate,customer,14400,2026-11-09,2026-11-13
+12,1,Task,T011 · Customer: Name Okta admin and grant SAML access,"Harbor names an Okta administrator, sets a date for access, and supports SAML application setup (K10).
+
+Acceptance criteria:
+- Okta administrator named
+- Date for Okta access recorded in the plan
+- SAML application setup access or metadata provided
+
+Blocked by: T003
+Contract: R13 (§2.8)
+Plan id: T011",initiate,customer,7200,2026-11-09,2026-11-13
+13,1,Task,"T012 · Agree video list, priority matrix and hypercare calendar","Resolve K12: agree the number, topics and length of the end-user training videos. Agree a priority-1 to priority-4 definition matrix, whether the 30 hypercare days are calendar or business days, and the time zone that sets business hours.
+
+Acceptance criteria:
+- Video list with topics and maximum length agreed
+- Priority definition matrix agreed
+- Hypercare calendar basis and time zone agreed
+
+Blocked by: T003
+Contract: R17 (§2.10), R18 (§2.11)
+Plan id: T012",initiate,implementation_lead,10800,2026-11-09,2026-11-11
+14,1,Task,T013 · Set custom report spec deadline and limits,"Resolve K08: agree that specifications for up to 3 custom reports are due by the end of discovery. Agree that the reports are built only with standard Platform reporting tools, in line with the custom development exclusion.
+
+Acceptance criteria:
+- Custom report specification deadline set at end of discovery
+- Complexity boundary (Platform reporting tools only) agreed in writing
+
+Blocked by: T003
+Contract: R15 (§2.9)
+Plan id: T013",initiate,solutions_consultant,7200,2026-11-09,2026-11-10
+15,1,Task,T014 · Run weekly status meetings and maintain shared plan,"Hold weekly status meetings from kickoff through hypercare and keep the shared project plan current. Log every late customer dependency in the status report to support change orders (K04).
+
+Acceptance criteria:
+- Status meeting held every week
+- Weekly status report issued, including late customer dependencies
+- Shared project plan updated at least weekly
+
+Blocked by: T004
+Contract: R02 (§2.1), R03 (§2.1)
+Plan id: T014",initiate,implementation_lead,144000,2026-11-12,2027-02-25
+17,16,Task,T015 · Publish discovery agenda and pre-work request,"Resolve K11: publish an agenda that spreads intake, approval rules, matching tolerances, payments and reporting across the four remote workshops. Request pre-work: current approval matrices and payment process descriptions for all three entities.
+
+Acceptance criteria:
+- Agenda allocating topics across 4 workshops published
+- Pre-work list sent to the Customer PM
+
+Blocked by: T003
+Contract: R04 (§2.2)
+Plan id: T015 · on the critical path",discover,solutions_consultant,14400,2026-11-09,2026-11-09
+18,16,Task,T016 · Customer: Complete discovery pre-work,"Harbor gathers its current approval matrices, invoice intake description and payment process documentation for all three entities ahead of workshop 1.
+
+Acceptance criteria:
+- Current approval matrices shared
+- Invoice intake and payment process descriptions shared for all 3 entities
+
+Blocked by: T015, T002
+Contract: R04 (§2.2)
+Plan id: T016 · on the critical path",discover,customer,28800,2026-11-10,2026-11-13
+19,16,Task,T017 · Run workshop 1: invoice intake and entities,"Remote workshop (up to 2 hours) to document current invoice intake and entity structure for the three operating entities.
+
+Acceptance criteria:
+- Workshop held, no longer than 2 hours
+- Current invoice intake process documented
+- Entity structure for the 3 entities documented
+
+Blocked by: T016
+Contract: R04 (§2.2), R05 (§2.3)
+Plan id: T017 · on the critical path",discover,solutions_consultant,21600,2026-11-16,2026-11-17
+20,16,Task,T018 · Run workshop 2: approval rules and workflows,"Remote workshop (up to 2 hours) to document approval rules by invoice amount, department and entity, and to scope up to 15 workflows.
+
+Acceptance criteria:
+- Workshop held, no longer than 2 hours
+- Approval rules documented
+- Draft workflow list totalling no more than 15 workflows
+
+Blocked by: T017
+Contract: R04 (§2.2), R06 (§2.3)
+Plan id: T018 · on the critical path",discover,solutions_consultant,21600,2026-11-18,2026-11-19
+21,16,Task,T019 · Run workshop 3: PO matching and NetSuite data,"Remote workshop (up to 2 hours) covering two-way and three-way matching, tolerance proposals, receipts, and NetSuite objects in scope.
+
+Acceptance criteria:
+- Workshop held, no longer than 2 hours
+- Matching rules and draft tolerance thresholds documented
+- NetSuite objects and receipt data source documented
+
+Blocked by: T018
+Contract: R04 (§2.2), R07 (§2.4), R09 (§2.5)
+Plan id: T019 · on the critical path",discover,solutions_consultant,21600,2026-11-20,2026-11-23
+22,16,Task,"T020 · Run workshop 4: payments, SSO and reporting","Remote final workshop (up to 2 hours) covering payment processes per entity (ACH, virtual card, CAD EFT), Okta SSO and reporting needs.
+
+Acceptance criteria:
+- Workshop held, no longer than 2 hours
+- Current payment processes documented per entity
+- SSO and reporting requirements documented
+- No more than 4 workshops held in total
+
+Blocked by: T019
+Contract: R04 (§2.2), R11 (§2.7), R12 (§2.7), R13 (§2.8), R14 (§2.9)
+Plan id: T020 · on the critical path",discover,solutions_consultant,21600,2026-11-24,2026-11-25
+23,16,Task,T021 · Customer: Agree PO matching tolerance thresholds,"Harbor agrees price and quantity tolerance thresholds for two-way and three-way matching with Ledgerline during discovery.
+
+Acceptance criteria:
+- Tolerance thresholds agreed in writing for each entity
+- Thresholds captured for inclusion in the signed design
+
+Blocked by: T019
+Contract: C07 (§2.5)
+Plan id: T021",discover,customer,7200,2026-11-24,2026-11-30
+24,16,Task,T022 · Confirm NetSuite item receipt sync for matching,"Resolve K06: confirm with Harbor that NetSuite item receipts will be synced to support three-way matching. Record this in the scope baseline.
+
+Acceptance criteria:
+- Item receipt sync from NetSuite confirmed
+- Receipt sync recorded in the scope baseline
+
+Blocked by: T019, T010
+Contract: R07 (§2.4), R09 (§2.5)
+Plan id: T022",discover,integration_engineer,10800,2026-11-24,2026-11-25
+25,16,Task,T023 · Customer: Specify up to three custom reports,"Harbor delivers specifications for up to 3 custom reports by the end of discovery, within the agreed complexity boundary.
+
+Acceptance criteria:
+- No more than 3 custom report specifications delivered
+- Specifications delivered by the end-of-discovery deadline
+- Each specification lists fields, filters and audience
+
+Blocked by: T013, T020
+Contract: C06 (§2.9)
+Plan id: T023 · on the critical path",discover,customer,21600,2026-11-30,2026-12-04
+26,16,Task,T024 · Write solution design document,"Document the target design: three entities, approval workflow design (up to 15), matching rules and tolerances, payment rails per entity, NetSuite objects, Okta SSO, standard and custom reports. Also document the current-state processes found in discovery.
+
+Acceptance criteria:
+- Current invoice intake, approval rules and payment processes documented
+- Target design covers all 3 entities
+- Workflow design totals no more than 15 workflows
+- Tolerance thresholds and receipt sync captured
+- Payment rails per entity, SSO and reports specified
+
+Blocked by: T020, T021, T022, T023
+Contract: R04 (§2.2), R05 (§2.3), R06 (§2.3), R09 (§2.5), R11 (§2.7), R12 (§2.7), R13 (§2.8), R14 (§2.9), R15 (§2.9)
+Plan id: T024 · on the critical path",discover,solutions_consultant,86400,2026-12-07,2026-12-11
+27,16,Task,T025 · Customer: Sign off solution design,"The Harbor sponsor reviews and signs the solution design document, including tolerance thresholds.
+
+Acceptance criteria:
+- Solution design signed by the sponsor
+- Tolerance thresholds included in the signed document
+
+Blocked by: T024
+Contract: C01 (§4.1)
+Plan id: T025 · on the critical path",discover,customer,14400,2026-12-14,2026-12-16
+29,28,Task,T026 · Set up sandbox and production tenants,"Provision the Harbor sandbox and production tenants and base settings.
+
+Acceptance criteria:
+- Sandbox tenant provisioned
+- Production tenant provisioned
+- Customer PM and admin access granted to sandbox
+
+Blocked by: T003
+Contract: R05 (§2.3)
+Plan id: T026",configure,solutions_consultant,21600,2026-11-09,2026-11-10
+30,28,Task,T027 · Configure Harbor Logistics Group (US) entity,"Configure the US parent entity: currency, departments, GL structure and users per the signed design.
+
+Acceptance criteria:
+- Harbor Logistics Group (US) entity configured per signed design
+- USD currency and departments set
+
+Blocked by: T025, T026, T008
+Contract: R05 (§2.3)
+Plan id: T027",configure,solutions_consultant,28800,2026-12-17,2026-12-18
+31,28,Task,T028 · Configure Harbor Freight Canada Ltd. entity,"Configure the Canadian entity with CAD currency, departments and GL structure per the signed design.
+
+Acceptance criteria:
+- Harbor Freight Canada Ltd. entity configured per signed design
+- CAD currency set
+
+Blocked by: T025, T026, T008
+Contract: R05 (§2.3)
+Plan id: T028",configure,solutions_consultant,28800,2026-12-17,2026-12-18
+32,28,Task,T029 · Configure Harbor Warehousing LLC entity,"Configure Harbor Warehousing LLC per the signed design and the country confirmed at kickoff.
+
+Acceptance criteria:
+- Harbor Warehousing LLC entity configured per signed design
+- Currency set per confirmed country
+
+Blocked by: T025, T026, T008
+Contract: R05 (§2.3)
+Plan id: T029",configure,solutions_consultant,28800,2026-12-17,2026-12-18
+33,28,Task,T030 · Configure approval workflows for US entity,"Build the Harbor Logistics Group (US) approval workflows from the delivered approval matrix, with multi-level approval by amount, department and entity.
+
+Acceptance criteria:
+- US entity workflows match the delivered approval matrix
+- Multi-level approval based on invoice amount, department and entity
+- Running total across all entities no more than 15 workflows
+
+Blocked by: T027, T050
+Contract: R06 (§2.3)
+Plan id: T030",configure,solutions_consultant,36000,2026-12-21,2026-12-23
+34,28,Task,T031 · Configure approval workflows for Canada entity,"Build the Harbor Freight Canada Ltd. approval workflows from the delivered approval matrix.
+
+Acceptance criteria:
+- Canada entity workflows match the delivered approval matrix
+- Multi-level approval based on invoice amount, department and entity
+- Running total across all entities no more than 15 workflows
+
+Blocked by: T028, T050
+Contract: R06 (§2.3)
+Plan id: T031",configure,solutions_consultant,28800,2026-12-21,2026-12-22
+35,28,Task,T032 · Configure approval workflows for Warehousing entity,"Build the Harbor Warehousing LLC approval workflows from the delivered approval matrix.
+
+Acceptance criteria:
+- Warehousing entity workflows match the delivered approval matrix
+- Multi-level approval based on invoice amount, department and entity
+- Total across all entities no more than 15 workflows
+
+Blocked by: T029, T050
+Contract: R06 (§2.3)
+Plan id: T032",configure,solutions_consultant,28800,2026-12-21,2026-12-22
+36,28,Task,T033 · Configure two-way and three-way PO matching,"Configure invoice-to-PO two-way matching and invoice-to-PO-to-receipt three-way matching with the signed tolerance thresholds for each entity.
+
+Acceptance criteria:
+- Two-way matching configured
+- Three-way matching configured
+- Tolerance thresholds match the signed discovery document
+
+Blocked by: T027, T028, T029, T021, T025
+Contract: R09 (§2.5)
+Plan id: T033",configure,solutions_consultant,43200,2026-12-21,2026-12-23
+37,28,Task,T034 · Configure ACH and virtual card for US entities,"Configure ACH and virtual card payment methods in sandbox for the entities confirmed as US. Production activation waits on bank approval.
+
+Acceptance criteria:
+- ACH payments configured for US entities
+- Virtual card payments configured for US entities
+- Test payment runs succeed in sandbox
+
+Blocked by: T027, T029, T008
+Contract: R11 (§2.7)
+Plan id: T034",configure,solutions_consultant,28800,2026-12-21,2026-12-22
+38,28,Task,T035 · Configure CAD EFT payments for Harbor Freight Canada,"Configure CAD EFT payments for Harbor Freight Canada Ltd. in sandbox.
+
+Acceptance criteria:
+- CAD payments via EFT configured for Harbor Freight Canada Ltd.
+- Test EFT payment run succeeds in sandbox
+
+Blocked by: T028
+Contract: R12 (§2.7)
+Plan id: T035",configure,solutions_consultant,21600,2026-12-21,2026-12-22
+39,28,Task,T036 · Set up standard AP aging and cycle-time reports,"Configure the standard AP aging and approval cycle-time reports for all three entities.
+
+Acceptance criteria:
+- AP aging report delivered
+- Approval cycle-time report delivered
+- Both reports filterable by entity
+
+Blocked by: T030, T031, T032
+Contract: R14 (§2.9)
+Plan id: T036",configure,solutions_consultant,21600,2026-12-24,2026-12-28
+40,28,Task,T037 · Build custom report 1,"Build the first Customer-specified custom report using standard Platform reporting tools only.
+
+Acceptance criteria:
+- Report matches the Customer specification
+- Built with Platform reporting tools, no custom development
+
+Blocked by: T023, T027, T028, T029
+Contract: R15 (§2.9)
+Plan id: T037",configure,solutions_consultant,28800,2026-12-21,2026-12-22
+41,28,Task,T038 · Build custom report 2,"Build the second Customer-specified custom report using standard Platform reporting tools only.
+
+Acceptance criteria:
+- Report matches the Customer specification
+- Built with Platform reporting tools, no custom development
+
+Blocked by: T023, T027, T028, T029
+Contract: R15 (§2.9)
+Plan id: T038",configure,solutions_consultant,28800,2026-12-21,2026-12-22
+42,28,Task,T039 · Build custom report 3,"Build the third Customer-specified custom report using standard Platform reporting tools only.
+
+Acceptance criteria:
+- Report matches the Customer specification
+- Built with Platform reporting tools, no custom development
+- No more than 3 custom reports delivered in total
+
+Blocked by: T023, T027, T028, T029
+Contract: R15 (§2.9)
+Plan id: T039",configure,solutions_consultant,28800,2026-12-21,2026-12-22
+43,28,Task,T040 · Run internal configuration review,"Peer-review the sandbox configuration against the signed design before internal QA.
+
+Acceptance criteria:
+- 3 entities reviewed against the design
+- Workflows (no more than 15), matching, payments and reports reviewed
+- Review findings resolved or logged
+
+Blocked by: T030, T031, T032, T033, T034, T035, T036, T037, T038, T039
+Contract: R05 (§2.3), R06 (§2.3), R09 (§2.5), R11 (§2.7), R12 (§2.7), R14 (§2.9), R15 (§2.9)
+Plan id: T040",configure,implementation_lead,21600,2026-12-29,2026-12-30
+45,44,Task,T041 · Design NetSuite integration and field mapping,"Produce field mappings and sync frequency for vendors, purchase orders, item receipts, GL accounts, approved bills and payment status write-back across the three subsidiaries.
+
+Acceptance criteria:
+- Field mapping documented for each in-scope object
+- Subsidiary-to-entity mapping documented
+- Mapping reviewed by the Customer NetSuite admin
+
+Blocked by: T010, T022, T025
+Contract: R07 (§2.4)
+Plan id: T041 · on the critical path",integrate,integration_engineer,43200,2026-12-17,2026-12-21
+46,44,Task,T042 · Build vendor and GL account sync,"Configure the NetSuite-to-Platform sync of vendors and GL accounts for all three entities.
+
+Acceptance criteria:
+- Vendors sync
+- GL accounts sync
+- Sync runs without errors in sandbox
+
+Blocked by: T041, T027, T028, T029
+Contract: R07 (§2.4)
+Plan id: T042 · on the critical path",integrate,integration_engineer,43200,2026-12-22,2026-12-24
+47,44,Task,T043 · Build purchase order and item receipt sync,"Configure the sync of purchase orders and item receipts from NetSuite to support two-way and three-way matching.
+
+Acceptance criteria:
+- Purchase orders sync
+- Item receipts sync for three-way matching
+
+Blocked by: T042
+Contract: R07 (§2.4), R09 (§2.5)
+Plan id: T043",integrate,integration_engineer,50400,2026-12-28,2026-12-30
+48,44,Task,T044 · Build approved bill sync to NetSuite,"Configure posting of approved bills from the Platform to NetSuite.
+
+Acceptance criteria:
+- Approved bills sync to NetSuite with correct subsidiary, vendor and GL coding
+
+Blocked by: T042
+Contract: R07 (§2.4)
+Plan id: T044 · on the critical path",integrate,integration_engineer,43200,2026-12-28,2026-12-30
+49,44,Task,T045 · Build payment status write-back to NetSuite,"Configure posting of payment status for ACH, virtual card and CAD EFT payments back to NetSuite.
+
+Acceptance criteria:
+- Payment status posts back to NetSuite
+- Status is correct for each payment method in use
+
+Blocked by: T044
+Contract: R07 (§2.4)
+Plan id: T045 · on the critical path",integrate,integration_engineer,36000,2026-12-31,2027-01-04
+50,44,Task,T046 · Test NetSuite integration end to end in sandbox,"Run integration test cases for every object and entity, including matching scenarios that use synced POs and receipts.
+
+Acceptance criteria:
+- Vendors, POs, GL accounts and approved bills sync
+- Payment status posts back to NetSuite
+- Two-way and three-way matching work with synced data
+- No open severity-1 or severity-2 integration defects
+
+Blocked by: T043, T044, T045, T033
+Contract: R07 (§2.4), R09 (§2.5)
+Plan id: T046 · on the critical path",integrate,integration_engineer,57600,2027-01-05,2027-01-07
+52,51,Task,T047 · Configure SAML SSO with Okta in sandbox,"Configure the SAML connection between the Platform sandbox and Harbor's Okta tenant, working with the named Okta administrator.
+
+Acceptance criteria:
+- SAML metadata exchanged
+- SSO connection configured in sandbox
+
+Blocked by: T011, T026
+Contract: R13 (§2.8)
+Plan id: T047",integrate,integration_engineer,21600,2026-11-16,2026-11-17
+53,51,Task,T048 · Test Okta SSO login across entities,"Test SSO login for test users in each entity, plus access-denied scenarios.
+
+Acceptance criteria:
+- SAML SSO via Okta working for test users in all 3 entities
+- Users not assigned in Okta are denied access
+
+Blocked by: T047
+Contract: R13 (§2.8)
+Plan id: T048",integrate,integration_engineer,14400,2026-11-18,2026-11-19
+55,54,Task,T049 · Issue Ledgerline data templates,"Send templates for vendor master data, open purchase orders and approval matrices, reflecting the agreed field list.
+
+Acceptance criteria:
+- Templates for vendor master, open POs and approval matrices issued
+- Templates reflect the field list agreed at kickoff
+
+Blocked by: T007
+Contract: R10 (§2.6)
+Plan id: T049",migrate,data_specialist,10800,2026-11-12,2026-11-12
+56,54,Task,"T050 · Customer: Deliver vendor, open PO and approval data","Harbor delivers vendor master data, open purchase orders and approval matrices in Ledgerline's templates.
+
+Acceptance criteria:
+- Delivered within 10 business days of the final discovery workshop
+- Vendor master, open POs and approval matrices delivered in Ledgerline templates
+- Vendor volume within the agreed record limit
+
+Blocked by: T049, T020
+Contract: C03 (§4.3)
+Plan id: T050",migrate,customer,57600,2026-11-30,2026-12-11
+57,54,Task,T051 · Cleanse and validate vendor data,"Validate the delivered files for completeness, duplicates and format. Agree corrections with Harbor and check against NetSuite vendor records.
+
+Acceptance criteria:
+- Validation report issued
+- Duplicates and errors resolved with the Customer
+- Bank details handled as agreed at kickoff
+
+Blocked by: T050
+Contract: R10 (§2.6)
+Plan id: T051",migrate,data_specialist,43200,2026-12-14,2026-12-17
+58,54,Task,T052 · Load vendor data to sandbox and reconcile,"Run the trial load of historical vendor data into sandbox and reconcile it against the source.
+
+Acceptance criteria:
+- Trial load completed for all 3 entities
+- Record counts and key fields reconcile to source
+- Reconciliation report accepted by the Customer PM
+
+Blocked by: T051, T027, T028, T029, T042
+Contract: R10 (§2.6)
+Plan id: T052",migrate,data_specialist,28800,2026-12-28,2026-12-29
+60,59,Task,T053 · Run internal end-to-end QA,"Run end-to-end QA across all three entities: invoice intake, approval, matching, payment, NetSuite sync, SSO and reports.
+
+Acceptance criteria:
+- End-to-end scenarios pass for all 3 entities
+- No open severity-1 defects
+- QA report issued
+
+Blocked by: T040, T046, T048, T052
+Contract: R05 (§2.3), R06 (§2.3), R07 (§2.4), R09 (§2.5), R11 (§2.7), R12 (§2.7), R13 (§2.8), R14 (§2.9), R15 (§2.9)
+Plan id: T053 · on the critical path",test,solutions_consultant,57600,2027-01-08,2027-01-12
+61,59,Task,T054 · Prepare UAT scripts and issue delivery notice,"Prepare UAT scripts per entity, ready the sandbox, and issue the written delivery notice that starts the UAT clock.
+
+Acceptance criteria:
+- UAT scripts cover every in-scope requirement
+- UAT environment ready with migrated data
+- Written delivery notice issued to the Customer
+
+Blocked by: T053, T006
+Contract: C04 (§4.4)
+Plan id: T054 · on the critical path",test,solutions_consultant,36000,2027-01-13,2027-01-14
+62,59,Task,T055 · Customer: Complete user acceptance testing,"Harbor executes UAT scripts and reports material defects in writing.
+
+Acceptance criteria:
+- UAT completed within 10 business days of the delivery notice
+- Material defects reported in writing using the agreed severity levels
+
+Blocked by: T054
+Contract: C04 (§4.4)
+Plan id: T055 · on the critical path",test,customer,144000,2027-01-15,2027-01-29
+63,59,Task,T056 · Support UAT and fix defects,"Support Harbor testers daily, triage defects, and fix configuration and integration defects during the UAT window.
+
+Acceptance criteria:
+- Defects triaged within 1 business day
+- All severity-1 and severity-2 defects resolved or have an agreed workaround
+
+Blocked by: T054
+Contract: R05 (§2.3), R06 (§2.3), R07 (§2.4), R09 (§2.5), R11 (§2.7), R12 (§2.7), R13 (§2.8), R14 (§2.9), R15 (§2.9)
+Plan id: T056 · on the critical path",test,solutions_consultant,86400,2027-01-15,2027-01-29
+64,59,Task,T057 · Record UAT completion and sign-off,"Record UAT completion under the agreed rule (sign-off, window close or deemed acceptance). This triggers the 40% milestone invoice.
+
+Acceptance criteria:
+- UAT sign-off or deemed acceptance documented in writing
+- UAT milestone invoice triggered
+
+Blocked by: T055, T056
+Contract: C04 (§4.4)
+Plan id: T057 · on the critical path",test,implementation_lead,7200,2027-02-01,2027-02-01
+66,65,Task,T058 · Prepare admin training materials,"Build train-the-trainer materials covering entity administration, workflows, matching exceptions, payments and reports.
+
+Acceptance criteria:
+- Admin guide and slide deck completed
+- Materials reflect the configured Platform
+
+Blocked by: T040
+Contract: R16 (§2.10)
+Plan id: T058",train,trainer,57600,2026-12-31,2027-01-06
+67,65,Task,T059 · Customer: Nominate administrators for training,"Harbor nominates up to 10 administrators to attend the train-the-trainer sessions.
+
+Acceptance criteria:
+- Up to 10 administrators nominated
+- Session dates confirmed
+
+Blocked by: T004
+Contract: R16 (§2.10)
+Plan id: T059",train,customer,3600,2026-11-12,2026-11-13
+68,65,Task,T060 · Deliver train-the-trainer session 1,"Deliver the first remote train-the-trainer session for Harbor administrators.
+
+Acceptance criteria:
+- Session 1 delivered remotely
+- Attendance no more than 10 Customer administrators
+- Recording and materials shared
+
+Blocked by: T058, T059, T053
+Contract: R16 (§2.10)
+Plan id: T060",train,trainer,21600,2027-01-13,2027-01-13
+69,65,Task,T061 · Deliver train-the-trainer session 2,"Deliver the second remote train-the-trainer session for Harbor administrators.
+
+Acceptance criteria:
+- Session 2 delivered remotely
+- Attendance no more than 10 Customer administrators
+- 2 sessions delivered in total
+
+Blocked by: T060
+Contract: R16 (§2.10)
+Plan id: T061",train,trainer,21600,2027-01-14,2027-01-14
+70,65,Task,T062 · Record end-user training videos,"Record the end-user training videos from the list agreed at kickoff, using the configured sandbox.
+
+Acceptance criteria:
+- All videos on the agreed list recorded within agreed length
+- Videos shared with the Customer before go-live
+
+Blocked by: T012, T053
+Contract: R17 (§2.10)
+Plan id: T062",train,trainer,72000,2027-01-13,2027-01-20
+72,71,Task,T063 · Prepare cutover plan and go/no-go criteria,"Write the cutover runbook: configuration promotion, NetSuite production connection, production vendor load, payment rail activation. Include go/no-go criteria and the phased-by-entity fallback.
+
+Acceptance criteria:
+- Cutover runbook published
+- Go/no-go criteria agreed with the Customer PM
+- Phased go-live fallback documented
+
+Blocked by: T053
+Contract: R05 (§2.3)
+Plan id: T063",launch,implementation_lead,28800,2027-01-13,2027-01-14
+73,71,Task,T064 · Customer: Provide NetSuite production access,"Harbor provides NetSuite production integration credentials for cutover (see assumptions).
+
+Acceptance criteria:
+- Production integration credentials provided and tested
+
+Blocked by: T063
+Contract: R07 (§2.4)
+Plan id: T064",launch,customer,7200,2027-01-15,2027-01-20
+74,71,Task,T065 · Activate production payment rails,"Activate ACH and virtual card for US entities and CAD EFT for Harbor Freight Canada in production once bank approvals are in place.
+
+Acceptance criteria:
+- ACH payments enabled for US entities
+- Virtual card payments enabled for US entities
+- CAD payments via EFT supported for Harbor Freight Canada Ltd.
+
+Blocked by: T009, T034, T035, T057
+Contract: R11 (§2.7), R12 (§2.7)
+Plan id: T065",launch,solutions_consultant,21600,2027-02-02,2027-02-03
+75,71,Task,T066 · Hold go/no-go decision meeting,"Review readiness against the go/no-go criteria with the sponsor. Decide on full or phased go-live.
+
+Acceptance criteria:
+- Go/no-go decision recorded by the sponsor
+- Any phased-go-live decision documented, with a change order if Customer-caused
+
+Blocked by: T057, T063, T061
+Contract: R05 (§2.3)
+Plan id: T066 · on the critical path",launch,implementation_lead,10800,2027-02-02,2027-02-02
+76,71,Task,T067 · Promote configuration and SSO to production,"Promote the entity, workflow, matching, report and Okta SSO configuration from sandbox to production.
+
+Acceptance criteria:
+- Production configuration matches the accepted sandbox
+- SAML SSO via Okta working in production
+- Standard and custom reports available in production
+
+Blocked by: T066
+Contract: R05 (§2.3), R06 (§2.3), R09 (§2.5), R13 (§2.8), R14 (§2.9), R15 (§2.9)
+Plan id: T067 · on the critical path",launch,solutions_consultant,36000,2027-02-03,2027-02-04
+77,71,Task,T068 · Connect NetSuite production integration,"Connect the integration to NetSuite production and run the initial sync.
+
+Acceptance criteria:
+- Vendors, POs, receipts and GL accounts synced from production
+- Approved bill and payment status flows verified
+
+Blocked by: T066, T064
+Contract: R07 (§2.4)
+Plan id: T068 · on the critical path",launch,integration_engineer,28800,2027-02-03,2027-02-04
+78,71,Task,T069 · Load and reconcile production vendor data,"Run the production load of historical vendor data and reconcile it using the agreed acceptance test.
+
+Acceptance criteria:
+- Production vendor load completed
+- Reconciliation passes the agreed acceptance test
+
+Blocked by: T067, T068
+Contract: R10 (§2.6)
+Plan id: T069 · on the critical path",launch,data_specialist,21600,2027-02-05,2027-02-08
+79,71,Task,T070 · Go live for all three entities,"Confirm production readiness, open the Platform to users and confirm the first live transactions. This triggers the go-live milestone invoice.
+
+Acceptance criteria:
+- All 3 entities live on or before January 15, 2027
+- First live invoice approved and synced to NetSuite
+- Go-live confirmation sent to the sponsor
+
+Blocked by: T065, T067, T068, T069
+Contract: R05 (§2.3), R11 (§2.7), R12 (§2.7)
+Plan id: T070 · on the critical path",launch,implementation_lead,21600,2027-02-09,2027-02-09
+81,80,Task,T071 · Provide 30-day hypercare support,"Provide hypercare after go-live using the agreed priority matrix, calendar and time zone.
+
+Acceptance criteria:
+- 30 days of hypercare provided after go-live
+- Priority-1 response within 4 business hours
+- Issue log shared in weekly status
+
+Blocked by: T070
+Contract: R18 (§2.11)
+Plan id: T071 · on the critical path",hypercare,support_engineer,216000,2027-02-10,2027-03-12
+82,80,Task,T072 · Hand off to customer support team,"Transfer open issues, configuration documentation and contacts to the standard support team.
+
+Acceptance criteria:
+- Handoff meeting held
+- Open issues transferred with owners
+- Customer informed of support channels
+
+Blocked by: T071
+Contract: R18 (§2.11)
+Plan id: T072 · on the critical path",hypercare,support_engineer,14400,2027-03-15,2027-03-16
+83,80,Task,T073 · Close project and run lessons learned,"Run the lessons-learned session, close out the shared plan and issue the project closure report.
+
+Acceptance criteria:
+- Lessons-learned session held
+- Closure report issued to the sponsor
+
+Blocked by: T072
+Plan id: T073 · on the critical path",hypercare,implementation_lead,21600,2027-03-17,2027-03-18

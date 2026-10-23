@@ -1,0 +1,1594 @@
+{
+  "epics": [
+    {
+      "id": "E01",
+      "phase": "Initiate",
+      "title": "Project mobilisation, governance and kickoff scope confirmations",
+      "goal": "The project is mobilised with a named lead, agreed governance, a shared backward-scheduled plan and written answers to every kickoff-level contract risk.",
+      "tickets": [
+        {
+          "id": "T001",
+          "title": "Complete internal handoff from sales",
+          "description": "Review the signed SOW, fixed fee ($48,000), payment milestones and risk register (K01-K12) with the sales owner. Assign the named implementation lead and notify Harbor Logistics Group of the lead's name.",
+          "acceptance_criteria": [
+            "Named implementation lead assigned",
+            "SOW, exclusions and risks K01-K12 reviewed with sales",
+            "Customer notified in writing of the named implementation lead"
+          ],
+          "role": "implementation_lead",
+          "estimate_hours": 4.0,
+          "duration_days": 1,
+          "depends_on": [],
+          "requirement_ids": [
+            "R01"
+          ]
+        },
+        {
+          "id": "T002",
+          "title": "Customer: Name project sponsor and project manager",
+          "description": "Harbor names a project sponsor with decision-making authority and a day-to-day project manager before kickoff and the first discovery workshop (K10).",
+          "acceptance_criteria": [
+            "Project sponsor with decision-making authority named",
+            "Day-to-day project manager named",
+            "Both confirmed in writing before kickoff"
+          ],
+          "role": "customer",
+          "estimate_hours": 1.0,
+          "duration_days": 3,
+          "depends_on": [
+            "T001"
+          ],
+          "requirement_ids": [
+            "C01"
+          ]
+        },
+        {
+          "id": "T003",
+          "title": "Run project kickoff meeting",
+          "description": "Run a remote kickoff meeting covering scope, exclusions, timeline to the January 15, 2027 go-live, customer dependencies and their due dates, and the risk items that need decisions.",
+          "acceptance_criteria": [
+            "Kickoff meeting held within 10 business days of November 2, 2026 (by November 16, 2026)",
+            "Customer dependencies C01-C07 and due dates presented",
+            "Minutes and action list distributed within 1 business day"
+          ],
+          "role": "implementation_lead",
+          "estimate_hours": 6.0,
+          "duration_days": 1,
+          "depends_on": [
+            "T001",
+            "T002"
+          ],
+          "requirement_ids": [
+            "R01"
+          ]
+        },
+        {
+          "id": "T004",
+          "title": "Publish charter, RACI and backward-scheduled shared plan",
+          "description": "Produce the project charter and RACI and set the weekly status cadence. Publish a shared project plan backward-scheduled from January 15, 2027, with Thanksgiving and Christmas/New Year blackout dates and the critical path. Agree in principle a fallback of phased go-live by entity if a dependency slips (K02).",
+          "acceptance_criteria": [
+            "Charter and RACI agreed with the Customer PM",
+            "Shared project plan published with holiday blackout dates and critical path",
+            "Weekly status meeting series scheduled",
+            "Phased go-live fallback documented and acknowledged by sponsor"
+          ],
+          "role": "implementation_lead",
+          "estimate_hours": 10.0,
+          "duration_days": 3,
+          "depends_on": [
+            "T003"
+          ],
+          "requirement_ids": [
+            "R02",
+            "R03"
+          ]
+        },
+        {
+          "id": "T005",
+          "title": "Confirm integrations limited to NetSuite and Okta",
+          "description": "Resolve the conflict between Section 2.4 ('any other systems as reasonably required') and Section 6. Get written confirmation from the sponsor that integrations are limited to NetSuite and Okta. Any other system request goes through the Section 7 change order process (K01). No other integration work is planned.",
+          "acceptance_criteria": [
+            "Written sponsor confirmation that integration scope is NetSuite and Okta only",
+            "Process agreed for routing other system requests to a Section 7 change order",
+            "Confirmation recorded in the scope baseline"
+          ],
+          "role": "implementation_lead",
+          "estimate_hours": 2.0,
+          "duration_days": 3,
+          "depends_on": [
+            "T003"
+          ],
+          "requirement_ids": [
+            "R08"
+          ]
+        },
+        {
+          "id": "T006",
+          "title": "Agree UAT acceptance rules and delay remedies",
+          "description": "Resolve K04/K05: agree whether the 10-business-day UAT window or the 5-business-day deemed acceptance governs the configured Platform. Define 'material defect' and severity levels, the rule for UAT completion (40% milestone), the written delivery notice process, and agree that Customer-caused delays trigger a Section 7 change order.",
+          "acceptance_criteria": [
+            "Governing acceptance period for the configured Platform agreed in writing",
+            "Material defect and severity levels defined",
+            "UAT completion rule agreed (window close or deemed acceptance)",
+            "Customer-caused delay leads to change order, documented",
+            "Written delivery notice template agreed"
+          ],
+          "role": "implementation_lead",
+          "estimate_hours": 3.0,
+          "duration_days": 5,
+          "depends_on": [
+            "T003"
+          ],
+          "requirement_ids": [
+            "C04"
+          ]
+        },
+        {
+          "id": "T007",
+          "title": "Agree vendor data migration scope and acceptance test",
+          "description": "Resolve K07: agree record count limit, field list, number of migration loads, a reconciliation-based acceptance test, and handling of vendor bank details. Confirm that historical invoices and payment history are excluded per Section 6.",
+          "acceptance_criteria": [
+            "Vendor record count limit agreed",
+            "Field list agreed",
+            "Number of loads agreed (trial and production)",
+            "Reconciliation-based acceptance test agreed",
+            "Vendor bank details handling confirmed",
+            "Exclusion of historical invoices and payment history confirmed"
+          ],
+          "role": "data_specialist",
+          "estimate_hours": 3.0,
+          "duration_days": 3,
+          "depends_on": [
+            "T003"
+          ],
+          "requirement_ids": [
+            "R10"
+          ]
+        },
+        {
+          "id": "T008",
+          "title": "Confirm country and payment rails per entity",
+          "description": "Resolve K09: confirm the country of each of the three entities (including whether Harbor Warehousing LLC is a US entity) and which payment methods each uses. Record the result in the shared plan.",
+          "acceptance_criteria": [
+            "Country confirmed for each of the 3 entities",
+            "Payment methods (ACH, virtual card, CAD EFT) recorded per entity",
+            "Result recorded in the shared project plan"
+          ],
+          "role": "solutions_consultant",
+          "estimate_hours": 2.0,
+          "duration_days": 3,
+          "depends_on": [
+            "T003"
+          ],
+          "requirement_ids": [
+            "R11",
+            "R12"
+          ]
+        },
+        {
+          "id": "T009",
+          "title": "Customer: Obtain bank approvals for ACH, card, EFT",
+          "description": "Harbor starts bank approvals immediately after kickoff for ACH and virtual card payments for US entities. Harbor also completes banking setup for CAD EFT for Harbor Freight Canada Ltd. (K03). The due date is set in the shared plan. Late approval triggers a change order or phased payments go-live.",
+          "acceptance_criteria": [
+            "Bank approval received for ACH payments for US entities",
+            "Bank approval received for virtual card payments for US entities",
+            "CAD EFT banking set up for Harbor Freight Canada Ltd.",
+            "Approvals delivered by the due date recorded in the project plan"
+          ],
+          "role": "customer",
+          "estimate_hours": 8.0,
+          "duration_days": 25,
+          "depends_on": [
+            "T003"
+          ],
+          "requirement_ids": [
+            "C05"
+          ]
+        },
+        {
+          "id": "T010",
+          "title": "Customer: Provide NetSuite sandbox and integration admin",
+          "description": "Harbor provides NetSuite sandbox access and names an administrator with integration permissions.",
+          "acceptance_criteria": [
+            "NetSuite sandbox access provided within 5 business days of kickoff",
+            "Administrator with integration permissions named",
+            "Ledgerline credentials tested successfully"
+          ],
+          "role": "customer",
+          "estimate_hours": 4.0,
+          "duration_days": 5,
+          "depends_on": [
+            "T003"
+          ],
+          "requirement_ids": [
+            "C02"
+          ]
+        },
+        {
+          "id": "T011",
+          "title": "Customer: Name Okta admin and grant SAML access",
+          "description": "Harbor names an Okta administrator, sets a date for access, and supports SAML application setup (K10).",
+          "acceptance_criteria": [
+            "Okta administrator named",
+            "Date for Okta access recorded in the plan",
+            "SAML application setup access or metadata provided"
+          ],
+          "role": "customer",
+          "estimate_hours": 2.0,
+          "duration_days": 5,
+          "depends_on": [
+            "T003"
+          ],
+          "requirement_ids": [
+            "R13"
+          ]
+        },
+        {
+          "id": "T012",
+          "title": "Agree video list, priority matrix and hypercare calendar",
+          "description": "Resolve K12: agree the number, topics and length of the end-user training videos. Agree a priority-1 to priority-4 definition matrix, whether the 30 hypercare days are calendar or business days, and the time zone that sets business hours.",
+          "acceptance_criteria": [
+            "Video list with topics and maximum length agreed",
+            "Priority definition matrix agreed",
+            "Hypercare calendar basis and time zone agreed"
+          ],
+          "role": "implementation_lead",
+          "estimate_hours": 3.0,
+          "duration_days": 3,
+          "depends_on": [
+            "T003"
+          ],
+          "requirement_ids": [
+            "R17",
+            "R18"
+          ]
+        },
+        {
+          "id": "T013",
+          "title": "Set custom report spec deadline and limits",
+          "description": "Resolve K08: agree that specifications for up to 3 custom reports are due by the end of discovery. Agree that the reports are built only with standard Platform reporting tools, in line with the custom development exclusion.",
+          "acceptance_criteria": [
+            "Custom report specification deadline set at end of discovery",
+            "Complexity boundary (Platform reporting tools only) agreed in writing"
+          ],
+          "role": "solutions_consultant",
+          "estimate_hours": 2.0,
+          "duration_days": 2,
+          "depends_on": [
+            "T003"
+          ],
+          "requirement_ids": [
+            "R15"
+          ]
+        },
+        {
+          "id": "T014",
+          "title": "Run weekly status meetings and maintain shared plan",
+          "description": "Hold weekly status meetings from kickoff through hypercare and keep the shared project plan current. Log every late customer dependency in the status report to support change orders (K04).",
+          "acceptance_criteria": [
+            "Status meeting held every week",
+            "Weekly status report issued, including late customer dependencies",
+            "Shared project plan updated at least weekly"
+          ],
+          "role": "implementation_lead",
+          "estimate_hours": 40.0,
+          "duration_days": 70,
+          "depends_on": [
+            "T004"
+          ],
+          "requirement_ids": [
+            "R02",
+            "R03"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "E02",
+      "phase": "Discover",
+      "title": "Discovery workshops and solution design",
+      "goal": "Current processes are documented and the Customer has signed a solution design covering entities, workflows, matching tolerances, payments, SSO and reports.",
+      "tickets": [
+        {
+          "id": "T015",
+          "title": "Publish discovery agenda and pre-work request",
+          "description": "Resolve K11: publish an agenda that spreads intake, approval rules, matching tolerances, payments and reporting across the four remote workshops. Request pre-work: current approval matrices and payment process descriptions for all three entities.",
+          "acceptance_criteria": [
+            "Agenda allocating topics across 4 workshops published",
+            "Pre-work list sent to the Customer PM"
+          ],
+          "role": "solutions_consultant",
+          "estimate_hours": 4.0,
+          "duration_days": 1,
+          "depends_on": [
+            "T003"
+          ],
+          "requirement_ids": [
+            "R04"
+          ]
+        },
+        {
+          "id": "T016",
+          "title": "Customer: Complete discovery pre-work",
+          "description": "Harbor gathers its current approval matrices, invoice intake description and payment process documentation for all three entities ahead of workshop 1.",
+          "acceptance_criteria": [
+            "Current approval matrices shared",
+            "Invoice intake and payment process descriptions shared for all 3 entities"
+          ],
+          "role": "customer",
+          "estimate_hours": 8.0,
+          "duration_days": 4,
+          "depends_on": [
+            "T015",
+            "T002"
+          ],
+          "requirement_ids": [
+            "R04"
+          ]
+        },
+        {
+          "id": "T017",
+          "title": "Run workshop 1: invoice intake and entities",
+          "description": "Remote workshop (up to 2 hours) to document current invoice intake and entity structure for the three operating entities.",
+          "acceptance_criteria": [
+            "Workshop held, no longer than 2 hours",
+            "Current invoice intake process documented",
+            "Entity structure for the 3 entities documented"
+          ],
+          "role": "solutions_consultant",
+          "estimate_hours": 6.0,
+          "duration_days": 2,
+          "depends_on": [
+            "T016"
+          ],
+          "requirement_ids": [
+            "R04",
+            "R05"
+          ]
+        },
+        {
+          "id": "T018",
+          "title": "Run workshop 2: approval rules and workflows",
+          "description": "Remote workshop (up to 2 hours) to document approval rules by invoice amount, department and entity, and to scope up to 15 workflows.",
+          "acceptance_criteria": [
+            "Workshop held, no longer than 2 hours",
+            "Approval rules documented",
+            "Draft workflow list totalling no more than 15 workflows"
+          ],
+          "role": "solutions_consultant",
+          "estimate_hours": 6.0,
+          "duration_days": 2,
+          "depends_on": [
+            "T017"
+          ],
+          "requirement_ids": [
+            "R04",
+            "R06"
+          ]
+        },
+        {
+          "id": "T019",
+          "title": "Run workshop 3: PO matching and NetSuite data",
+          "description": "Remote workshop (up to 2 hours) covering two-way and three-way matching, tolerance proposals, receipts, and NetSuite objects in scope.",
+          "acceptance_criteria": [
+            "Workshop held, no longer than 2 hours",
+            "Matching rules and draft tolerance thresholds documented",
+            "NetSuite objects and receipt data source documented"
+          ],
+          "role": "solutions_consultant",
+          "estimate_hours": 6.0,
+          "duration_days": 2,
+          "depends_on": [
+            "T018"
+          ],
+          "requirement_ids": [
+            "R04",
+            "R07",
+            "R09"
+          ]
+        },
+        {
+          "id": "T020",
+          "title": "Run workshop 4: payments, SSO and reporting",
+          "description": "Remote final workshop (up to 2 hours) covering payment processes per entity (ACH, virtual card, CAD EFT), Okta SSO and reporting needs.",
+          "acceptance_criteria": [
+            "Workshop held, no longer than 2 hours",
+            "Current payment processes documented per entity",
+            "SSO and reporting requirements documented",
+            "No more than 4 workshops held in total"
+          ],
+          "role": "solutions_consultant",
+          "estimate_hours": 6.0,
+          "duration_days": 2,
+          "depends_on": [
+            "T019"
+          ],
+          "requirement_ids": [
+            "R04",
+            "R11",
+            "R12",
+            "R13",
+            "R14"
+          ]
+        },
+        {
+          "id": "T021",
+          "title": "Customer: Agree PO matching tolerance thresholds",
+          "description": "Harbor agrees price and quantity tolerance thresholds for two-way and three-way matching with Ledgerline during discovery.",
+          "acceptance_criteria": [
+            "Tolerance thresholds agreed in writing for each entity",
+            "Thresholds captured for inclusion in the signed design"
+          ],
+          "role": "customer",
+          "estimate_hours": 2.0,
+          "duration_days": 3,
+          "depends_on": [
+            "T019"
+          ],
+          "requirement_ids": [
+            "C07"
+          ]
+        },
+        {
+          "id": "T022",
+          "title": "Confirm NetSuite item receipt sync for matching",
+          "description": "Resolve K06: confirm with Harbor that NetSuite item receipts will be synced to support three-way matching. Record this in the scope baseline.",
+          "acceptance_criteria": [
+            "Item receipt sync from NetSuite confirmed",
+            "Receipt sync recorded in the scope baseline"
+          ],
+          "role": "integration_engineer",
+          "estimate_hours": 3.0,
+          "duration_days": 2,
+          "depends_on": [
+            "T019",
+            "T010"
+          ],
+          "requirement_ids": [
+            "R07",
+            "R09"
+          ]
+        },
+        {
+          "id": "T023",
+          "title": "Customer: Specify up to three custom reports",
+          "description": "Harbor delivers specifications for up to 3 custom reports by the end of discovery, within the agreed complexity boundary.",
+          "acceptance_criteria": [
+            "No more than 3 custom report specifications delivered",
+            "Specifications delivered by the end-of-discovery deadline",
+            "Each specification lists fields, filters and audience"
+          ],
+          "role": "customer",
+          "estimate_hours": 6.0,
+          "duration_days": 5,
+          "depends_on": [
+            "T013",
+            "T020"
+          ],
+          "requirement_ids": [
+            "C06"
+          ]
+        },
+        {
+          "id": "T024",
+          "title": "Write solution design document",
+          "description": "Document the target design: three entities, approval workflow design (up to 15), matching rules and tolerances, payment rails per entity, NetSuite objects, Okta SSO, standard and custom reports. Also document the current-state processes found in discovery.",
+          "acceptance_criteria": [
+            "Current invoice intake, approval rules and payment processes documented",
+            "Target design covers all 3 entities",
+            "Workflow design totals no more than 15 workflows",
+            "Tolerance thresholds and receipt sync captured",
+            "Payment rails per entity, SSO and reports specified"
+          ],
+          "role": "solutions_consultant",
+          "estimate_hours": 24.0,
+          "duration_days": 5,
+          "depends_on": [
+            "T020",
+            "T021",
+            "T022",
+            "T023"
+          ],
+          "requirement_ids": [
+            "R04",
+            "R05",
+            "R06",
+            "R09",
+            "R11",
+            "R12",
+            "R13",
+            "R14",
+            "R15"
+          ]
+        },
+        {
+          "id": "T025",
+          "title": "Customer: Sign off solution design",
+          "description": "The Harbor sponsor reviews and signs the solution design document, including tolerance thresholds.",
+          "acceptance_criteria": [
+            "Solution design signed by the sponsor",
+            "Tolerance thresholds included in the signed document"
+          ],
+          "role": "customer",
+          "estimate_hours": 4.0,
+          "duration_days": 3,
+          "depends_on": [
+            "T024"
+          ],
+          "requirement_ids": [
+            "C01"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "E03",
+      "phase": "Configure",
+      "title": "Platform configuration for three entities",
+      "goal": "The sandbox tenant is configured to the signed design for all three entities, with workflows, matching, payments and reports passing internal review.",
+      "tickets": [
+        {
+          "id": "T026",
+          "title": "Set up sandbox and production tenants",
+          "description": "Provision the Harbor sandbox and production tenants and base settings.",
+          "acceptance_criteria": [
+            "Sandbox tenant provisioned",
+            "Production tenant provisioned",
+            "Customer PM and admin access granted to sandbox"
+          ],
+          "role": "solutions_consultant",
+          "estimate_hours": 6.0,
+          "duration_days": 2,
+          "depends_on": [
+            "T003"
+          ],
+          "requirement_ids": [
+            "R05"
+          ]
+        },
+        {
+          "id": "T027",
+          "title": "Configure Harbor Logistics Group (US) entity",
+          "description": "Configure the US parent entity: currency, departments, GL structure and users per the signed design.",
+          "acceptance_criteria": [
+            "Harbor Logistics Group (US) entity configured per signed design",
+            "USD currency and departments set"
+          ],
+          "role": "solutions_consultant",
+          "estimate_hours": 8.0,
+          "duration_days": 2,
+          "depends_on": [
+            "T025",
+            "T026",
+            "T008"
+          ],
+          "requirement_ids": [
+            "R05"
+          ]
+        },
+        {
+          "id": "T028",
+          "title": "Configure Harbor Freight Canada Ltd. entity",
+          "description": "Configure the Canadian entity with CAD currency, departments and GL structure per the signed design.",
+          "acceptance_criteria": [
+            "Harbor Freight Canada Ltd. entity configured per signed design",
+            "CAD currency set"
+          ],
+          "role": "solutions_consultant",
+          "estimate_hours": 8.0,
+          "duration_days": 2,
+          "depends_on": [
+            "T025",
+            "T026",
+            "T008"
+          ],
+          "requirement_ids": [
+            "R05"
+          ]
+        },
+        {
+          "id": "T029",
+          "title": "Configure Harbor Warehousing LLC entity",
+          "description": "Configure Harbor Warehousing LLC per the signed design and the country confirmed at kickoff.",
+          "acceptance_criteria": [
+            "Harbor Warehousing LLC entity configured per signed design",
+            "Currency set per confirmed country"
+          ],
+          "role": "solutions_consultant",
+          "estimate_hours": 8.0,
+          "duration_days": 2,
+          "depends_on": [
+            "T025",
+            "T026",
+            "T008"
+          ],
+          "requirement_ids": [
+            "R05"
+          ]
+        },
+        {
+          "id": "T030",
+          "title": "Configure approval workflows for US entity",
+          "description": "Build the Harbor Logistics Group (US) approval workflows from the delivered approval matrix, with multi-level approval by amount, department and entity.",
+          "acceptance_criteria": [
+            "US entity workflows match the delivered approval matrix",
+            "Multi-level approval based on invoice amount, department and entity",
+            "Running total across all entities no more than 15 workflows"
+          ],
+          "role": "solutions_consultant",
+          "estimate_hours": 10.0,
+          "duration_days": 3,
+          "depends_on": [
+            "T027",
+            "T050"
+          ],
+          "requirement_ids": [
+            "R06"
+          ]
+        },
+        {
+          "id": "T031",
+          "title": "Configure approval workflows for Canada entity",
+          "description": "Build the Harbor Freight Canada Ltd. approval workflows from the delivered approval matrix.",
+          "acceptance_criteria": [
+            "Canada entity workflows match the delivered approval matrix",
+            "Multi-level approval based on invoice amount, department and entity",
+            "Running total across all entities no more than 15 workflows"
+          ],
+          "role": "solutions_consultant",
+          "estimate_hours": 8.0,
+          "duration_days": 2,
+          "depends_on": [
+            "T028",
+            "T050"
+          ],
+          "requirement_ids": [
+            "R06"
+          ]
+        },
+        {
+          "id": "T032",
+          "title": "Configure approval workflows for Warehousing entity",
+          "description": "Build the Harbor Warehousing LLC approval workflows from the delivered approval matrix.",
+          "acceptance_criteria": [
+            "Warehousing entity workflows match the delivered approval matrix",
+            "Multi-level approval based on invoice amount, department and entity",
+            "Total across all entities no more than 15 workflows"
+          ],
+          "role": "solutions_consultant",
+          "estimate_hours": 8.0,
+          "duration_days": 2,
+          "depends_on": [
+            "T029",
+            "T050"
+          ],
+          "requirement_ids": [
+            "R06"
+          ]
+        },
+        {
+          "id": "T033",
+          "title": "Configure two-way and three-way PO matching",
+          "description": "Configure invoice-to-PO two-way matching and invoice-to-PO-to-receipt three-way matching with the signed tolerance thresholds for each entity.",
+          "acceptance_criteria": [
+            "Two-way matching configured",
+            "Three-way matching configured",
+            "Tolerance thresholds match the signed discovery document"
+          ],
+          "role": "solutions_consultant",
+          "estimate_hours": 12.0,
+          "duration_days": 3,
+          "depends_on": [
+            "T027",
+            "T028",
+            "T029",
+            "T021",
+            "T025"
+          ],
+          "requirement_ids": [
+            "R09"
+          ]
+        },
+        {
+          "id": "T034",
+          "title": "Configure ACH and virtual card for US entities",
+          "description": "Configure ACH and virtual card payment methods in sandbox for the entities confirmed as US. Production activation waits on bank approval.",
+          "acceptance_criteria": [
+            "ACH payments configured for US entities",
+            "Virtual card payments configured for US entities",
+            "Test payment runs succeed in sandbox"
+          ],
+          "role": "solutions_consultant",
+          "estimate_hours": 8.0,
+          "duration_days": 2,
+          "depends_on": [
+            "T027",
+            "T029",
+            "T008"
+          ],
+          "requirement_ids": [
+            "R11"
+          ]
+        },
+        {
+          "id": "T035",
+          "title": "Configure CAD EFT payments for Harbor Freight Canada",
+          "description": "Configure CAD EFT payments for Harbor Freight Canada Ltd. in sandbox.",
+          "acceptance_criteria": [
+            "CAD payments via EFT configured for Harbor Freight Canada Ltd.",
+            "Test EFT payment run succeeds in sandbox"
+          ],
+          "role": "solutions_consultant",
+          "estimate_hours": 6.0,
+          "duration_days": 2,
+          "depends_on": [
+            "T028"
+          ],
+          "requirement_ids": [
+            "R12"
+          ]
+        },
+        {
+          "id": "T036",
+          "title": "Set up standard AP aging and cycle-time reports",
+          "description": "Configure the standard AP aging and approval cycle-time reports for all three entities.",
+          "acceptance_criteria": [
+            "AP aging report delivered",
+            "Approval cycle-time report delivered",
+            "Both reports filterable by entity"
+          ],
+          "role": "solutions_consultant",
+          "estimate_hours": 6.0,
+          "duration_days": 2,
+          "depends_on": [
+            "T030",
+            "T031",
+            "T032"
+          ],
+          "requirement_ids": [
+            "R14"
+          ]
+        },
+        {
+          "id": "T037",
+          "title": "Build custom report 1",
+          "description": "Build the first Customer-specified custom report using standard Platform reporting tools only.",
+          "acceptance_criteria": [
+            "Report matches the Customer specification",
+            "Built with Platform reporting tools, no custom development"
+          ],
+          "role": "solutions_consultant",
+          "estimate_hours": 8.0,
+          "duration_days": 2,
+          "depends_on": [
+            "T023",
+            "T027",
+            "T028",
+            "T029"
+          ],
+          "requirement_ids": [
+            "R15"
+          ]
+        },
+        {
+          "id": "T038",
+          "title": "Build custom report 2",
+          "description": "Build the second Customer-specified custom report using standard Platform reporting tools only.",
+          "acceptance_criteria": [
+            "Report matches the Customer specification",
+            "Built with Platform reporting tools, no custom development"
+          ],
+          "role": "solutions_consultant",
+          "estimate_hours": 8.0,
+          "duration_days": 2,
+          "depends_on": [
+            "T023",
+            "T027",
+            "T028",
+            "T029"
+          ],
+          "requirement_ids": [
+            "R15"
+          ]
+        },
+        {
+          "id": "T039",
+          "title": "Build custom report 3",
+          "description": "Build the third Customer-specified custom report using standard Platform reporting tools only.",
+          "acceptance_criteria": [
+            "Report matches the Customer specification",
+            "Built with Platform reporting tools, no custom development",
+            "No more than 3 custom reports delivered in total"
+          ],
+          "role": "solutions_consultant",
+          "estimate_hours": 8.0,
+          "duration_days": 2,
+          "depends_on": [
+            "T023",
+            "T027",
+            "T028",
+            "T029"
+          ],
+          "requirement_ids": [
+            "R15"
+          ]
+        },
+        {
+          "id": "T040",
+          "title": "Run internal configuration review",
+          "description": "Peer-review the sandbox configuration against the signed design before internal QA.",
+          "acceptance_criteria": [
+            "3 entities reviewed against the design",
+            "Workflows (no more than 15), matching, payments and reports reviewed",
+            "Review findings resolved or logged"
+          ],
+          "role": "implementation_lead",
+          "estimate_hours": 6.0,
+          "duration_days": 2,
+          "depends_on": [
+            "T030",
+            "T031",
+            "T032",
+            "T033",
+            "T034",
+            "T035",
+            "T036",
+            "T037",
+            "T038",
+            "T039"
+          ],
+          "requirement_ids": [
+            "R05",
+            "R06",
+            "R09",
+            "R11",
+            "R12",
+            "R14",
+            "R15"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "E04",
+      "phase": "Integrate",
+      "title": "Oracle NetSuite integration",
+      "goal": "Vendors, POs, receipts, GL accounts and approved bills sync with NetSuite, and payment status posts back, all proven in the NetSuite sandbox.",
+      "tickets": [
+        {
+          "id": "T041",
+          "title": "Design NetSuite integration and field mapping",
+          "description": "Produce field mappings and sync frequency for vendors, purchase orders, item receipts, GL accounts, approved bills and payment status write-back across the three subsidiaries.",
+          "acceptance_criteria": [
+            "Field mapping documented for each in-scope object",
+            "Subsidiary-to-entity mapping documented",
+            "Mapping reviewed by the Customer NetSuite admin"
+          ],
+          "role": "integration_engineer",
+          "estimate_hours": 12.0,
+          "duration_days": 3,
+          "depends_on": [
+            "T010",
+            "T022",
+            "T025"
+          ],
+          "requirement_ids": [
+            "R07"
+          ]
+        },
+        {
+          "id": "T042",
+          "title": "Build vendor and GL account sync",
+          "description": "Configure the NetSuite-to-Platform sync of vendors and GL accounts for all three entities.",
+          "acceptance_criteria": [
+            "Vendors sync",
+            "GL accounts sync",
+            "Sync runs without errors in sandbox"
+          ],
+          "role": "integration_engineer",
+          "estimate_hours": 12.0,
+          "duration_days": 3,
+          "depends_on": [
+            "T041",
+            "T027",
+            "T028",
+            "T029"
+          ],
+          "requirement_ids": [
+            "R07"
+          ]
+        },
+        {
+          "id": "T043",
+          "title": "Build purchase order and item receipt sync",
+          "description": "Configure the sync of purchase orders and item receipts from NetSuite to support two-way and three-way matching.",
+          "acceptance_criteria": [
+            "Purchase orders sync",
+            "Item receipts sync for three-way matching"
+          ],
+          "role": "integration_engineer",
+          "estimate_hours": 14.0,
+          "duration_days": 3,
+          "depends_on": [
+            "T042"
+          ],
+          "requirement_ids": [
+            "R07",
+            "R09"
+          ]
+        },
+        {
+          "id": "T044",
+          "title": "Build approved bill sync to NetSuite",
+          "description": "Configure posting of approved bills from the Platform to NetSuite.",
+          "acceptance_criteria": [
+            "Approved bills sync to NetSuite with correct subsidiary, vendor and GL coding"
+          ],
+          "role": "integration_engineer",
+          "estimate_hours": 12.0,
+          "duration_days": 3,
+          "depends_on": [
+            "T042"
+          ],
+          "requirement_ids": [
+            "R07"
+          ]
+        },
+        {
+          "id": "T045",
+          "title": "Build payment status write-back to NetSuite",
+          "description": "Configure posting of payment status for ACH, virtual card and CAD EFT payments back to NetSuite.",
+          "acceptance_criteria": [
+            "Payment status posts back to NetSuite",
+            "Status is correct for each payment method in use"
+          ],
+          "role": "integration_engineer",
+          "estimate_hours": 10.0,
+          "duration_days": 2,
+          "depends_on": [
+            "T044"
+          ],
+          "requirement_ids": [
+            "R07"
+          ]
+        },
+        {
+          "id": "T046",
+          "title": "Test NetSuite integration end to end in sandbox",
+          "description": "Run integration test cases for every object and entity, including matching scenarios that use synced POs and receipts.",
+          "acceptance_criteria": [
+            "Vendors, POs, GL accounts and approved bills sync",
+            "Payment status posts back to NetSuite",
+            "Two-way and three-way matching work with synced data",
+            "No open severity-1 or severity-2 integration defects"
+          ],
+          "role": "integration_engineer",
+          "estimate_hours": 16.0,
+          "duration_days": 3,
+          "depends_on": [
+            "T043",
+            "T044",
+            "T045",
+            "T033"
+          ],
+          "requirement_ids": [
+            "R07",
+            "R09"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "E05",
+      "phase": "Integrate",
+      "title": "Okta SAML single sign-on",
+      "goal": "Harbor users sign in to the Platform through Okta SAML SSO.",
+      "tickets": [
+        {
+          "id": "T047",
+          "title": "Configure SAML SSO with Okta in sandbox",
+          "description": "Configure the SAML connection between the Platform sandbox and Harbor's Okta tenant, working with the named Okta administrator.",
+          "acceptance_criteria": [
+            "SAML metadata exchanged",
+            "SSO connection configured in sandbox"
+          ],
+          "role": "integration_engineer",
+          "estimate_hours": 6.0,
+          "duration_days": 2,
+          "depends_on": [
+            "T011",
+            "T026"
+          ],
+          "requirement_ids": [
+            "R13"
+          ]
+        },
+        {
+          "id": "T048",
+          "title": "Test Okta SSO login across entities",
+          "description": "Test SSO login for test users in each entity, plus access-denied scenarios.",
+          "acceptance_criteria": [
+            "SAML SSO via Okta working for test users in all 3 entities",
+            "Users not assigned in Okta are denied access"
+          ],
+          "role": "integration_engineer",
+          "estimate_hours": 4.0,
+          "duration_days": 2,
+          "depends_on": [
+            "T047"
+          ],
+          "requirement_ids": [
+            "R13"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "E06",
+      "phase": "Migrate",
+      "title": "Historical vendor data migration",
+      "goal": "Agreed historical vendor data is cleansed, loaded and reconciled in sandbox. No historical invoices or payment history are migrated.",
+      "tickets": [
+        {
+          "id": "T049",
+          "title": "Issue Ledgerline data templates",
+          "description": "Send templates for vendor master data, open purchase orders and approval matrices, reflecting the agreed field list.",
+          "acceptance_criteria": [
+            "Templates for vendor master, open POs and approval matrices issued",
+            "Templates reflect the field list agreed at kickoff"
+          ],
+          "role": "data_specialist",
+          "estimate_hours": 3.0,
+          "duration_days": 1,
+          "depends_on": [
+            "T007"
+          ],
+          "requirement_ids": [
+            "R10"
+          ]
+        },
+        {
+          "id": "T050",
+          "title": "Customer: Deliver vendor, open PO and approval data",
+          "description": "Harbor delivers vendor master data, open purchase orders and approval matrices in Ledgerline's templates.",
+          "acceptance_criteria": [
+            "Delivered within 10 business days of the final discovery workshop",
+            "Vendor master, open POs and approval matrices delivered in Ledgerline templates",
+            "Vendor volume within the agreed record limit"
+          ],
+          "role": "customer",
+          "estimate_hours": 16.0,
+          "duration_days": 10,
+          "depends_on": [
+            "T049",
+            "T020"
+          ],
+          "requirement_ids": [
+            "C03"
+          ]
+        },
+        {
+          "id": "T051",
+          "title": "Cleanse and validate vendor data",
+          "description": "Validate the delivered files for completeness, duplicates and format. Agree corrections with Harbor and check against NetSuite vendor records.",
+          "acceptance_criteria": [
+            "Validation report issued",
+            "Duplicates and errors resolved with the Customer",
+            "Bank details handled as agreed at kickoff"
+          ],
+          "role": "data_specialist",
+          "estimate_hours": 12.0,
+          "duration_days": 4,
+          "depends_on": [
+            "T050"
+          ],
+          "requirement_ids": [
+            "R10"
+          ]
+        },
+        {
+          "id": "T052",
+          "title": "Load vendor data to sandbox and reconcile",
+          "description": "Run the trial load of historical vendor data into sandbox and reconcile it against the source.",
+          "acceptance_criteria": [
+            "Trial load completed for all 3 entities",
+            "Record counts and key fields reconcile to source",
+            "Reconciliation report accepted by the Customer PM"
+          ],
+          "role": "data_specialist",
+          "estimate_hours": 8.0,
+          "duration_days": 2,
+          "depends_on": [
+            "T051",
+            "T027",
+            "T028",
+            "T029",
+            "T042"
+          ],
+          "requirement_ids": [
+            "R10"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "E07",
+      "phase": "Test",
+      "title": "Internal QA and user acceptance testing",
+      "goal": "The configured Platform has passed internal QA and Customer UAT under the agreed acceptance rules.",
+      "tickets": [
+        {
+          "id": "T053",
+          "title": "Run internal end-to-end QA",
+          "description": "Run end-to-end QA across all three entities: invoice intake, approval, matching, payment, NetSuite sync, SSO and reports.",
+          "acceptance_criteria": [
+            "End-to-end scenarios pass for all 3 entities",
+            "No open severity-1 defects",
+            "QA report issued"
+          ],
+          "role": "solutions_consultant",
+          "estimate_hours": 16.0,
+          "duration_days": 3,
+          "depends_on": [
+            "T040",
+            "T046",
+            "T048",
+            "T052"
+          ],
+          "requirement_ids": [
+            "R05",
+            "R06",
+            "R07",
+            "R09",
+            "R11",
+            "R12",
+            "R13",
+            "R14",
+            "R15"
+          ]
+        },
+        {
+          "id": "T054",
+          "title": "Prepare UAT scripts and issue delivery notice",
+          "description": "Prepare UAT scripts per entity, ready the sandbox, and issue the written delivery notice that starts the UAT clock.",
+          "acceptance_criteria": [
+            "UAT scripts cover every in-scope requirement",
+            "UAT environment ready with migrated data",
+            "Written delivery notice issued to the Customer"
+          ],
+          "role": "solutions_consultant",
+          "estimate_hours": 10.0,
+          "duration_days": 2,
+          "depends_on": [
+            "T053",
+            "T006"
+          ],
+          "requirement_ids": [
+            "C04"
+          ]
+        },
+        {
+          "id": "T055",
+          "title": "Customer: Complete user acceptance testing",
+          "description": "Harbor executes UAT scripts and reports material defects in writing.",
+          "acceptance_criteria": [
+            "UAT completed within 10 business days of the delivery notice",
+            "Material defects reported in writing using the agreed severity levels"
+          ],
+          "role": "customer",
+          "estimate_hours": 40.0,
+          "duration_days": 10,
+          "depends_on": [
+            "T054"
+          ],
+          "requirement_ids": [
+            "C04"
+          ]
+        },
+        {
+          "id": "T056",
+          "title": "Support UAT and fix defects",
+          "description": "Support Harbor testers daily, triage defects, and fix configuration and integration defects during the UAT window.",
+          "acceptance_criteria": [
+            "Defects triaged within 1 business day",
+            "All severity-1 and severity-2 defects resolved or have an agreed workaround"
+          ],
+          "role": "solutions_consultant",
+          "estimate_hours": 24.0,
+          "duration_days": 10,
+          "depends_on": [
+            "T054"
+          ],
+          "requirement_ids": [
+            "R05",
+            "R06",
+            "R07",
+            "R09",
+            "R11",
+            "R12",
+            "R13",
+            "R14",
+            "R15"
+          ]
+        },
+        {
+          "id": "T057",
+          "title": "Record UAT completion and sign-off",
+          "description": "Record UAT completion under the agreed rule (sign-off, window close or deemed acceptance). This triggers the 40% milestone invoice.",
+          "acceptance_criteria": [
+            "UAT sign-off or deemed acceptance documented in writing",
+            "UAT milestone invoice triggered"
+          ],
+          "role": "implementation_lead",
+          "estimate_hours": 2.0,
+          "duration_days": 1,
+          "depends_on": [
+            "T055",
+            "T056"
+          ],
+          "requirement_ids": [
+            "C04"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "E08",
+      "phase": "Train",
+      "title": "Administrator and end-user training",
+      "goal": "Up to 10 Harbor administrators are trained and recorded end-user videos are available.",
+      "tickets": [
+        {
+          "id": "T058",
+          "title": "Prepare admin training materials",
+          "description": "Build train-the-trainer materials covering entity administration, workflows, matching exceptions, payments and reports.",
+          "acceptance_criteria": [
+            "Admin guide and slide deck completed",
+            "Materials reflect the configured Platform"
+          ],
+          "role": "trainer",
+          "estimate_hours": 16.0,
+          "duration_days": 4,
+          "depends_on": [
+            "T040"
+          ],
+          "requirement_ids": [
+            "R16"
+          ]
+        },
+        {
+          "id": "T059",
+          "title": "Customer: Nominate administrators for training",
+          "description": "Harbor nominates up to 10 administrators to attend the train-the-trainer sessions.",
+          "acceptance_criteria": [
+            "Up to 10 administrators nominated",
+            "Session dates confirmed"
+          ],
+          "role": "customer",
+          "estimate_hours": 1.0,
+          "duration_days": 2,
+          "depends_on": [
+            "T004"
+          ],
+          "requirement_ids": [
+            "R16"
+          ]
+        },
+        {
+          "id": "T060",
+          "title": "Deliver train-the-trainer session 1",
+          "description": "Deliver the first remote train-the-trainer session for Harbor administrators.",
+          "acceptance_criteria": [
+            "Session 1 delivered remotely",
+            "Attendance no more than 10 Customer administrators",
+            "Recording and materials shared"
+          ],
+          "role": "trainer",
+          "estimate_hours": 6.0,
+          "duration_days": 1,
+          "depends_on": [
+            "T058",
+            "T059",
+            "T053"
+          ],
+          "requirement_ids": [
+            "R16"
+          ]
+        },
+        {
+          "id": "T061",
+          "title": "Deliver train-the-trainer session 2",
+          "description": "Deliver the second remote train-the-trainer session for Harbor administrators.",
+          "acceptance_criteria": [
+            "Session 2 delivered remotely",
+            "Attendance no more than 10 Customer administrators",
+            "2 sessions delivered in total"
+          ],
+          "role": "trainer",
+          "estimate_hours": 6.0,
+          "duration_days": 1,
+          "depends_on": [
+            "T060"
+          ],
+          "requirement_ids": [
+            "R16"
+          ]
+        },
+        {
+          "id": "T062",
+          "title": "Record end-user training videos",
+          "description": "Record the end-user training videos from the list agreed at kickoff, using the configured sandbox.",
+          "acceptance_criteria": [
+            "All videos on the agreed list recorded within agreed length",
+            "Videos shared with the Customer before go-live"
+          ],
+          "role": "trainer",
+          "estimate_hours": 20.0,
+          "duration_days": 5,
+          "depends_on": [
+            "T012",
+            "T053"
+          ],
+          "requirement_ids": [
+            "R17"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "E09",
+      "phase": "Launch",
+      "title": "Production cutover and go-live",
+      "goal": "All three entities are live in production on or before January 15, 2027.",
+      "tickets": [
+        {
+          "id": "T063",
+          "title": "Prepare cutover plan and go/no-go criteria",
+          "description": "Write the cutover runbook: configuration promotion, NetSuite production connection, production vendor load, payment rail activation. Include go/no-go criteria and the phased-by-entity fallback.",
+          "acceptance_criteria": [
+            "Cutover runbook published",
+            "Go/no-go criteria agreed with the Customer PM",
+            "Phased go-live fallback documented"
+          ],
+          "role": "implementation_lead",
+          "estimate_hours": 8.0,
+          "duration_days": 2,
+          "depends_on": [
+            "T053"
+          ],
+          "requirement_ids": [
+            "R05"
+          ]
+        },
+        {
+          "id": "T064",
+          "title": "Customer: Provide NetSuite production access",
+          "description": "Harbor provides NetSuite production integration credentials for cutover (see assumptions).",
+          "acceptance_criteria": [
+            "Production integration credentials provided and tested"
+          ],
+          "role": "customer",
+          "estimate_hours": 2.0,
+          "duration_days": 3,
+          "depends_on": [
+            "T063"
+          ],
+          "requirement_ids": [
+            "R07"
+          ]
+        },
+        {
+          "id": "T065",
+          "title": "Activate production payment rails",
+          "description": "Activate ACH and virtual card for US entities and CAD EFT for Harbor Freight Canada in production once bank approvals are in place.",
+          "acceptance_criteria": [
+            "ACH payments enabled for US entities",
+            "Virtual card payments enabled for US entities",
+            "CAD payments via EFT supported for Harbor Freight Canada Ltd."
+          ],
+          "role": "solutions_consultant",
+          "estimate_hours": 6.0,
+          "duration_days": 2,
+          "depends_on": [
+            "T009",
+            "T034",
+            "T035",
+            "T057"
+          ],
+          "requirement_ids": [
+            "R11",
+            "R12"
+          ]
+        },
+        {
+          "id": "T066",
+          "title": "Hold go/no-go decision meeting",
+          "description": "Review readiness against the go/no-go criteria with the sponsor. Decide on full or phased go-live.",
+          "acceptance_criteria": [
+            "Go/no-go decision recorded by the sponsor",
+            "Any phased-go-live decision documented, with a change order if Customer-caused"
+          ],
+          "role": "implementation_lead",
+          "estimate_hours": 3.0,
+          "duration_days": 1,
+          "depends_on": [
+            "T057",
+            "T063",
+            "T061"
+          ],
+          "requirement_ids": [
+            "R05"
+          ]
+        },
+        {
+          "id": "T067",
+          "title": "Promote configuration and SSO to production",
+          "description": "Promote the entity, workflow, matching, report and Okta SSO configuration from sandbox to production.",
+          "acceptance_criteria": [
+            "Production configuration matches the accepted sandbox",
+            "SAML SSO via Okta working in production",
+            "Standard and custom reports available in production"
+          ],
+          "role": "solutions_consultant",
+          "estimate_hours": 10.0,
+          "duration_days": 2,
+          "depends_on": [
+            "T066"
+          ],
+          "requirement_ids": [
+            "R05",
+            "R06",
+            "R09",
+            "R13",
+            "R14",
+            "R15"
+          ]
+        },
+        {
+          "id": "T068",
+          "title": "Connect NetSuite production integration",
+          "description": "Connect the integration to NetSuite production and run the initial sync.",
+          "acceptance_criteria": [
+            "Vendors, POs, receipts and GL accounts synced from production",
+            "Approved bill and payment status flows verified"
+          ],
+          "role": "integration_engineer",
+          "estimate_hours": 8.0,
+          "duration_days": 2,
+          "depends_on": [
+            "T066",
+            "T064"
+          ],
+          "requirement_ids": [
+            "R07"
+          ]
+        },
+        {
+          "id": "T069",
+          "title": "Load and reconcile production vendor data",
+          "description": "Run the production load of historical vendor data and reconcile it using the agreed acceptance test.",
+          "acceptance_criteria": [
+            "Production vendor load completed",
+            "Reconciliation passes the agreed acceptance test"
+          ],
+          "role": "data_specialist",
+          "estimate_hours": 6.0,
+          "duration_days": 2,
+          "depends_on": [
+            "T067",
+            "T068"
+          ],
+          "requirement_ids": [
+            "R10"
+          ]
+        },
+        {
+          "id": "T070",
+          "title": "Go live for all three entities",
+          "description": "Confirm production readiness, open the Platform to users and confirm the first live transactions. This triggers the go-live milestone invoice.",
+          "acceptance_criteria": [
+            "All 3 entities live on or before January 15, 2027",
+            "First live invoice approved and synced to NetSuite",
+            "Go-live confirmation sent to the sponsor"
+          ],
+          "role": "implementation_lead",
+          "estimate_hours": 6.0,
+          "duration_days": 1,
+          "depends_on": [
+            "T065",
+            "T067",
+            "T068",
+            "T069"
+          ],
+          "requirement_ids": [
+            "R05",
+            "R11",
+            "R12"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "E10",
+      "phase": "Hypercare",
+      "title": "Hypercare, support handoff and closure",
+      "goal": "The solution is stable after 30 days of hypercare, Harbor is handed to standard support, and the project is closed.",
+      "tickets": [
+        {
+          "id": "T071",
+          "title": "Provide 30-day hypercare support",
+          "description": "Provide hypercare after go-live using the agreed priority matrix, calendar and time zone.",
+          "acceptance_criteria": [
+            "30 days of hypercare provided after go-live",
+            "Priority-1 response within 4 business hours",
+            "Issue log shared in weekly status"
+          ],
+          "role": "support_engineer",
+          "estimate_hours": 60.0,
+          "duration_days": 22,
+          "depends_on": [
+            "T070"
+          ],
+          "requirement_ids": [
+            "R18"
+          ]
+        },
+        {
+          "id": "T072",
+          "title": "Hand off to customer support team",
+          "description": "Transfer open issues, configuration documentation and contacts to the standard support team.",
+          "acceptance_criteria": [
+            "Handoff meeting held",
+            "Open issues transferred with owners",
+            "Customer informed of support channels"
+          ],
+          "role": "support_engineer",
+          "estimate_hours": 4.0,
+          "duration_days": 2,
+          "depends_on": [
+            "T071"
+          ],
+          "requirement_ids": [
+            "R18"
+          ]
+        },
+        {
+          "id": "T073",
+          "title": "Close project and run lessons learned",
+          "description": "Run the lessons-learned session, close out the shared plan and issue the project closure report.",
+          "acceptance_criteria": [
+            "Lessons-learned session held",
+            "Closure report issued to the sponsor"
+          ],
+          "role": "implementation_lead",
+          "estimate_hours": 6.0,
+          "duration_days": 2,
+          "depends_on": [
+            "T072"
+          ],
+          "requirement_ids": []
+        }
+      ]
+    }
+  ],
+  "assumptions": [
+    "All services are delivered remotely; on-site services are excluded (Section 6).",
+    "Two environments: one sandbox and one production Platform tenant, connected to one NetSuite sandbox and NetSuite production.",
+    "Harbor runs a single NetSuite OneWorld account, with the three entities as subsidiaries.",
+    "Harbor will provide NetSuite production integration credentials for cutover. The contract names only sandbox access (C02).",
+    "Harbor Logistics Group (US) and Harbor Warehousing LLC are US entities using ACH and virtual card; Harbor Freight Canada Ltd. uses CAD EFT only. To be confirmed at kickoff (K09).",
+    "Historical vendor data is limited to active vendors, capped at 5,000 records, with one trial load and one production load. Volume, fields and bank detail handling to be confirmed (K07).",
+    "NetSuite item receipts are synced to support three-way matching, and treated as part of the R07 integration scope (K06).",
+    "Vendors migrated from historical data will be de-duplicated against vendors synced from NetSuite; NetSuite remains the vendor master after go-live.",
+    "The 15 approval workflows are split roughly 7 (US), 4 (Canada) and 4 (Warehousing), adjustable within the total of 15.",
+    "Up to 150 end users across the three entities will be provisioned through Okta. The user count is not stated in the contract.",
+    "End-user training is delivered as up to 5 recorded videos of no more than 10 minutes each. To be confirmed (K12).",
+    "Each train-the-trainer session lasts up to 3 hours.",
+    "Hypercare runs 30 calendar days from go-live, with business hours in US Eastern time. To be confirmed (K12).",
+    "Bank approvals for ACH, virtual card and CAD EFT are received by December 18, 2026. Otherwise payments go live in a later phase under a change order (K03).",
+    "Kickoff is held by November 16, 2026, and the final discovery workshop by November 25, 2026, so data delivery (C03) lands by about December 10, 2026.",
+    "UAT runs over the December holiday period, with up to 8 Harbor testers. One round of defect fixes is included in the fixed fee.",
+    "Custom reports use standard Platform reporting tools only, with no custom development.",
+    "Integrations are limited to NetSuite and Okta. Any other system is a change order under Section 7 (K01)."
+  ]
+}
